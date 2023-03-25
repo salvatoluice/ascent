@@ -9,11 +9,15 @@ const Register = () => {
 
     const handleUserReg = (e) => {
         e.preventDefault();
-        axios.post('/register', {
+        try {
+          axios.post('/register', {
             name,
             email,
             password
         });
+        }catch(e) {
+          alert('Registration failed!')
+        }
     }
 
 
