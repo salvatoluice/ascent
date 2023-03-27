@@ -4,7 +4,7 @@ import { UserContext } from '../UserContext'
 import axios from 'axios';
 
 const Account = () => {
-    const {user} = useContext(UserContext);
+    const {user, setUser} = useContext(UserContext);
     const {pathname} = useLocation();
     let subpage = pathname.split('/')?.[2];
     const navigate = useNavigate();
@@ -14,6 +14,9 @@ const Account = () => {
 
       async function logout() {
         await axios.post('/logout')
+        alert('Well, logout successiful')
+        setUser(null)
+        navigate('/')
       }
 
 
