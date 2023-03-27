@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { UserContext } from '../UserContext'
 import axios from 'axios';
+import CarsPage from './CarsPage';
 
 const Account = () => {
     const {user, setUser} = useContext(UserContext);
@@ -53,10 +54,13 @@ const Account = () => {
         </svg>
         Rented
       </Link>
-      <Link className={linkClasses('places')} to={'/account/places'}>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
+      <Link className={linkClasses('cars')} to={'/account/cars'}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+          <path d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 116 0h3a.75.75 0 00.75-.75V15z" />
+          <path d="M8.25 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0zM15.75 6.75a.75.75 0 00-.75.75v11.25c0 .087.015.17.042.248a3 3 0 015.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 00-3.732-10.104 1.837 1.837 0 00-1.47-.725H15.75z" />
+          <path d="M19.5 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" />
         </svg>
+
         My Cars
       </Link>
     </nav>
@@ -65,6 +69,9 @@ const Account = () => {
                 Logged in as: <br /> Name: {user.name} <br />Email: {user.email} <br />
                 <button onClick={logout} className='primary max-w-sm mt-2'>Logout</button>
             </div>
+        )}
+        {subpage === 'cars' && (
+          <CarsPage />
         )}
     </>
   )

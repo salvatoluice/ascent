@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const carSchema = new mongoose.Schema({
-    owner: mongoose.Schema.Types.ObjectId,
+    owner: {type:mongoose.Schema.Types.ObjectId, ref:'User'},
     title: String,
     address: String,
     photos: [String],
