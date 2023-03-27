@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const carSchema = new mongoose.Schema({
+    owner: mongoose.Schema.Types.ObjectId,
     title: String,
     address: String,
     photos: [String],
