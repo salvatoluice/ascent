@@ -35,6 +35,8 @@ const CarsPage = () => {
       );
     }
 
+    function addPhotoByLink(){}
+
     // console.log(action);
   return (
     <div>
@@ -76,17 +78,17 @@ const CarsPage = () => {
             {preInput('Extra Info', 'Car rules and any other vital information')}
             <textarea value={extraInfo} onChange={e => setExtraInfo(e.target.value)} />
             {preInput('Number of Days', 'How many days can your car be rented? Max number of passengers your car can accommodate')}
-            <div>
-              <div className='grid gap-2 sm:grid-cols-3'>
+            <div className='grid gap-2 sm:grid-cols-3'>
+              <div>
                 <h3 className='mt-2 -mb-2'>First day available</h3>
                 <input type="text" placeholder='31/03/2023 19:00...' value={checkin} onChange={e => setCheckin(e.target.value)} />
               </div>
               <div>
-                <h3>Last day/Return date</h3>
+                <h3 className='mt-2 -mb-1'>Last day/Return date</h3>
                 <input type="text" placeholder='31/03/2023 19:00...' value={checkout} onChange={e => setCheckout(e.target.value)} />
               </div>
               <div>
-                <h3>Number of passengers</h3>
+                <h3 className='mt-2 -mb-1'>Number of passengers</h3>
                 <input type="text" placeholder='Passengers' value={maxPass} onChange={e => setMaxPass(e.target.value)} />
               </div>
             </div>
