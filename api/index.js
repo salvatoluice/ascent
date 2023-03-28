@@ -5,6 +5,7 @@ const User = require('./models/User.js');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser')
+const imageDownloader = require('image-downloader');
 require('dotenv').config();
 const app = express();
 
@@ -13,6 +14,7 @@ const jwtSecret = 'fasefraw4r5r3wq45wdfgw34twdfg';
 
 app.use(express.json());
 app.use(cookieParser());
+app.use('/uploads', express.static(__dirname+'/uploads'));
 app.use(cors({
     credentials: true,
     origin: 'http://127.0.0.1:5173',
@@ -89,10 +91,8 @@ app.post('/upload-by-link', async (req,res) => {
   const newName = 'photo' + Date.now() + '.jpg';
   await imageDownloader.image({
     url: link,
-    dest: '/tmp/' +newName,
+    dest: __dirname + '/uploads/' +newName,
   });
-  const url = await uploadToS3('/tmp/' +newName, newName, mime.lookup('/tmp/' +newName));
-  res.json(url);
 });
 
 app.listen(4000);
