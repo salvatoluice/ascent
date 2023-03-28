@@ -6,6 +6,10 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser')
 const imageDownloader = require('image-downloader');
+const {S3Client, PutObjectCommand} = require('@aws-sdk/client-s3');
+const multer = require('multer');
+const fs = require('fs'); 
+const mime = require('mime-types');
 require('dotenv').config();
 const app = express();
 
@@ -16,8 +20,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname+'/uploads'));
 app.use(cors({
-    credentials: true,
-    origin: 'http://127.0.0.1:5173',
+  credentials: true,
+  origin: 'http://127.0.0.1:5173',
 }));
 
 // console.log(process.env.MONGO_URL);
@@ -91,8 +95,9 @@ app.post('/upload-by-link', async (req,res) => {
   const newName = 'photo' + Date.now() + '.jpg';
   await imageDownloader.image({
     url: link,
-    dest: __dirname + '/uploads/' +newName,
+    dest: __dirname + '/uploads/' +newName, 
   });
+  res.json(newName)
 });
 
 app.listen(4000);

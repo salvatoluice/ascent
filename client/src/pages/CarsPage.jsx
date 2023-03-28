@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Perks from '../Perks';
 import axios from 'axios';
+import { response } from 'express';
 
 const CarsPage = () => {
     const {action} = useParams();
@@ -36,26 +37,29 @@ const CarsPage = () => {
       );
     }
 
-    async function addPhotoByLink(e){
-      e.preventDefault();
+    async function addPhotoByLink(ev) {
+      ev.preventDefault();
       const {data:filename} = await axios.post('/upload-by-link', {link: photoLink})
       setAddedPhotos(prev => {
-        return [...prev, filename]
-      })
+        return [...prev, filename];
+      });
       setPhotoLink('');
     }
 
-    function uploadPhoto(e){
-      const files = e.target.files;
+    function uploadPhoto(ev) {
+      const files = ev.target.files;
+      // console.log(files);
       const data = new FormData();
-      data.set('photos', files)
+      data.set('photos', files) 
       axios.post('/upload', data, {
-        headers: {'Content-Type':'multipart/form-data'}
+        headers: {'Content-type':'multipart/form-data'}
       }).then(response => {
         const {data:filename} = response;
+        // console.log(data);
         setAddedPhotos(prev => {
-          return [...prev, filename]
-        })      })
+          return [...prev, filename];
+        });
+      })
     }
 
     // console.log(action);
@@ -80,14 +84,16 @@ const CarsPage = () => {
             {preInput('Photos', 'Upload descriptive  photos kindly')}
             <div className='flex gap-2'>
               <input type="text" placeholder='Or, Upload using Image Url ...jpg' value={photoLink} onChange={e => setPhotoLink(e.target.value)} />
-              <button onClick={addPhotoByLink} className='bg-gray-200 px-4 rounded-xl'>Add&nbsp; Photo</button>
+              <button onClick={addPhotoByLink} className='bg-gray-200 px-4 rounded-xl'>Add Photo</button>
             </div>
             <div className='mt-2 grid gap-2 grid-cols-3 md:grid-cols-4 lg:grid-cols-6'>
-              {addedPhotos.length > 0 && addedPhotos.map(link => (
-                <div>
-                  <img className='rounded-2xl' src={'http://127.0.0.1:5173/'+link} />
-                </div>
-              ))}
+              {addedPhotos.length > 0 && addedPhotos.map(link => {
+                return (
+                  <div>
+                    <img className='rounded-2xl' src={'http://localhost:4000/uploads/'+link} alt="" />
+                  </div>
+                )
+                })}
               <label className='flex cursor-pointer items-center justify-center gap-1 border bg-transparent rounded-2xl p-2 text-2xl text-gray-600'>
                 <input type="file" className='hidden' onChange={uploadPhoto} />
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
