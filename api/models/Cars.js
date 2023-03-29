@@ -4,6 +4,7 @@ const carSchema = new mongoose.Schema({
     owner: {type:mongoose.Schema.Types.ObjectId, ref:'User'},
     title: String,
     address: String,
+    contaact: String,
     photos: [String],
     description: String,
     perks: [String],

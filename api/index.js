@@ -25,13 +25,13 @@ app.use(cors({
 
 // console.log(process.env.MONGO_URL);
 
-mongoose.connect(process.env.MONGO_URL);
-app.get('/test', (req, res) => {
-    res.json('test is ok')
-});
+// mongoose.connect(process.env.MONGO_URL);
+// app.get('/test', (req, res) => {
+//     res.json('test is ok')
+// });
 
 app.post('/register', async (req, res) => {
-    mongoose.connect(process.env.MONGO_URL);
+    mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
     const {name,email,password} = req.body;
   
     try {
@@ -47,7 +47,7 @@ app.post('/register', async (req, res) => {
 });
 
 app.post('/login', async (req,res) => {
-  mongoose.connect(process.env.MONGO_URL);
+  mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
   const {email,password} = req.body;
   const userDoc = await User.findOne({email});
   if (userDoc) {
@@ -69,7 +69,7 @@ app.post('/login', async (req,res) => {
 });
 
 app.get('/profile', (req,res) => {
-  mongoose.connect(process.env.MONGO_URL);
+  mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
   const {token} = req.cookies;
   if (token) {
     jwt.verify(token, jwtSecret, {}, async (err, userData) => {

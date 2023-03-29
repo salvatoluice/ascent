@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Perks from '../Perks';
 import axios from 'axios';
 import PhotoUploader from './PhotoUploader';
@@ -15,6 +15,8 @@ const CarsPage = () => {
     const [checkin, setCheckin] = useState('');
     const [checkout, setCheckout] = useState('');
     const [maxPass, setMaxPass] = useState(1);
+
+    const navigate = useNavigate();
 
     function inputHeader(text) {
       return (
@@ -35,6 +37,24 @@ const CarsPage = () => {
       );
     }
 
+    async function addNewCar(e){
+      e.preventDefault();
+
+      const carData = {
+        title, address, contaact,
+        addedPhotos, description, perks, 
+        extraInfo, checkin, checkout, 
+        maxPass
+      };
+      await axios.post('/cars', {
+        title, address, contaact,
+        addedPhotos, description, perks, 
+        extraInfo, checkin, checkout, 
+        maxPass
+      });
+      navigate('/account/')
+    }
+
 
     // console.log(action);
   return (
@@ -48,7 +68,7 @@ const CarsPage = () => {
             </Link>
         </div>
         <div>
-          <form>
+          <form onSubmit={addNewCar}>
             {preInput('Title', 'Title and model of your car. Should be Short and descriptive')}
             <input type='text' placeholder='Car Name & Brand' value={title} onChange={e => setTitle(e.target.value)} />
             {preInput('Address', 'Address to your place')}
