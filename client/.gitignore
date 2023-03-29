@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.idea
+api/node_modules
+api/.env
+api/uploads/*

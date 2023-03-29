@@ -25,8 +25,7 @@ app.use(cors({
 
 // console.log(process.env.MONGO_URL);
 
-mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority')
-
+mongoose.connect(process.env.MONGO_URL);
 app.get('/test', (req, res) => {
     res.json('test is ok')
 });
