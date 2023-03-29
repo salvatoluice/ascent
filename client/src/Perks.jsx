@@ -2,7 +2,13 @@ import React from 'react'
 
 const Perks = ({selected, onChange}) => {
     const handleCheckbox = (e) => {
-        console.log(e.target.checked)
+        // console.log(e.target.checked)
+        const {checked, name} = e.target;
+        if (checked) {
+            onChange([...selected, name]);
+        } else {
+            onChange([...selected.filter(selectedName => selectedName !== name)])
+        }
         // onChange([...selected, name]);
     }
   return (

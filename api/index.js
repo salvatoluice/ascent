@@ -30,8 +30,6 @@ app.get('/test', (req, res) => {
     res.json('test is ok')
 });
 
-// SBYfKBnzTMqenbIL
-
 app.post('/register', async (req, res) => {
     mongoose.connect(process.env.MONGO_URL);
     const {name,email,password} = req.body;
