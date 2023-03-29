@@ -6,10 +6,9 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser')
 const imageDownloader = require('image-downloader');
-const {S3Client, PutObjectCommand} = require('@aws-sdk/client-s3');
 const multer = require('multer');
-const fs = require('fs'); 
-const mime = require('mime-types');
+// const fs = require('fs'); 
+// const mime = require('mime-types');
 require('dotenv').config();
 const app = express();
 
@@ -99,5 +98,11 @@ app.post('/upload-by-link', async (req,res) => {
   });
   res.json(newName)
 });
+
+// Multer middlware for photo uploads
+// const photosMiddleware = multer({dest: 'uploads'})
+// app.post('/upload', photosMiddleware.array('photos', 100), (req, res) => {
+//   res.json(req.photos);
+// });
 
 app.listen(4000);

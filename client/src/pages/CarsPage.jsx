@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Perks from '../Perks';
 import axios from 'axios';
-import { response } from 'express';
 
 const CarsPage = () => {
-    const {action} = useParams();
     const [title, setTitle] = useState('');
     const [address, setAddress] = useState('');
     const [contaact, setContaact] = useState('');
