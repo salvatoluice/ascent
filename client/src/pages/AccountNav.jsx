@@ -1,11 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const AccountNav = () => {
 
+    const {pathname} = useLocation();
+    // console.log(pathname);
+
+    let subpage = pathname.split('/')?.[2]
+    // console.log({subpage});
+    if (subpage === undefined) {
+        subpage = 'profile'
+    }
+
+    // const isActive = pathname === '/account' && type === 'profile';
+
     function linkClasses (type=null) {
         let classes = 'inline-flex gap-1 py-2 px-6 rounded-full';
-        if (type === false) {
+        if (type === subpage) {
           classes += ' bg-primary text-white';
         } else {
           classes += ' bg-gray-200';

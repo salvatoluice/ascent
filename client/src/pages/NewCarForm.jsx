@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Perks from '../Perks';
+import AccountNav from './AccountNav';
 import PhotoUploader from './PhotoUploader';
 
 const NewCarForm = () => {
@@ -52,12 +53,13 @@ const NewCarForm = () => {
         extraInfo, checkin, checkout, 
         maxPass
       });
-      navigate('/account')
+      navigate('/account/cars');
     }
 
 
   return (
     <div>
+      <AccountNav />
       <form onSubmit={addNewCar}>
         {preInput('Title', 'Title and model of your car. Should be Short and descriptive')}
         <input type='text' placeholder='Car Name & Brand' value={title} onChange={e => setTitle(e.target.value)} />

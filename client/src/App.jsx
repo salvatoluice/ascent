@@ -8,6 +8,7 @@ import axios from 'axios'
 import { UserContextProvider } from './UserContext'
 import Account from './pages/Account'
 import NewCarForm from './pages/NewCarForm'
+import CarsPage from './pages/CarsPage'
 
 axios.defaults.baseURL = "http://127.0.0.1:4000";
 axios.defaults.withCredentials = true;
@@ -23,8 +24,8 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/account' element={<Account />} />
           <Route path='/account/bookings' element={<Account />} />
-          <Route path='/account/cars' element={<Account />} />
-          {/* <Route path="/account/cars/new" element={<NewCarForm />} /> */}
+          <Route path='/account/cars' element={<CarsPage />} />
+          <Route path="/account/cars/new" element={<NewCarForm />} />
         </Route>
       </Routes>
     </UserContextProvider>
