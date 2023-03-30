@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Perks from '../Perks';
 import axios from 'axios';
 import PhotoUploader from './PhotoUploader';
@@ -52,7 +52,7 @@ const CarsPage = () => {
         extraInfo, checkin, checkout, 
         maxPass
       });
-      navigate('/account/')
+      navigate('/account')
     }
 
 

@@ -9,9 +9,9 @@ const carSchema = new mongoose.Schema({
     description: String,
     perks: [String],
     extraInfo: String,
-    checkIn: Number,
+    checkin: Number,
     checkout: Number,
-    maxPass: Number
+    maxPass: Number,
 });
 
 const CarModel = mongoose.model('Car', carSchema);

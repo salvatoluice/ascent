@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const User = require('./models/User.js');
+const Cars = require('./models/Cars.js');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser')
@@ -110,6 +111,24 @@ app.post('/upload', photosMiddleware.array('photos', 100), (req, res) => {
     uploadedFiles.push(newPath.replace('uploads\\', ''));
   }
   res.json(uploadedFiles);
+});
+
+app.post('/cars', (req, res) => {
+  mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
+  const {token} = req.cookies;
+  const {
+    title,address,addedPhotos,description,contaact,
+    perks,extraInfo,checkin,checkout,maxPass,
+  } = req.body;
+  jwt.verify(token, jwtSecret, {}, async (err, userData) => {
+    if (err) throw err;
+    const carsDoc = await Cars.create({
+      owner:userData.id,contaact,
+      title,address,photos:addedPhotos,description,
+      perks,extraInfo,checkin,checkout,maxPass,
+    });
+    res.json(carsDoc);
+  });
 });
 
 app.listen(4000);
