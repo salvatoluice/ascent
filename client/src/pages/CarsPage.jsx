@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AccountNav from './AccountNav';
+import axios from 'axios';
 
 const CarsPage = () => {
     const [cars, setCars] = useState([]);
@@ -24,6 +25,22 @@ const CarsPage = () => {
                 </svg>
                 Add New Car
             </Link>
+        </div>
+        <div className='mt-4'>
+            {cars.length > 0 && cars.map(car => (
+                <Link to={'/account/cars/'+car._id} className='flex bg-gray-100 cursor-pointer gap-4 p-4 rounded-2xl'>
+                    <div className='w-32 h-32 bg-gray-300 grow shrink-0'>
+                        {car.photos.length > 0 && (
+                            <img src={car.photos[0]} alt="" />
+                            // <p>hello</p>
+                        )}
+                    </div>
+                    <div className='grow-0 shrink'>
+                        <h2 className='text-xl'>{car.title}</h2>
+                        <p className='text-sm mt-2'>{car.description}</p>
+                    </div>
+                </Link>
+            ))}
         </div>
     </div>
   )
