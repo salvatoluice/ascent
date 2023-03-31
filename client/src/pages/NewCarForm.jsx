@@ -1,21 +1,44 @@
 import axios from 'axios';
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom';
 import Perks from '../Perks';
 import AccountNav from './AccountNav';
 import PhotoUploader from './PhotoUploader';
 
 const NewCarForm = () => {
+  const {id} = useParams();
+  console.log(id);
   const [title, setTitle] = useState('');
-    const [address, setAddress] = useState('');
-    const [contaact, setContaact] = useState('');
-    const [addedPhotos, setAddedPhotos] = useState([]);
-    const [description, setDescription] = useState('');
-    const [perks, setPerks] = useState([]);
-    const [extraInfo, setExtraInfo] = useState('');
-    const [checkin, setCheckin] = useState('');
-    const [checkout, setCheckout] = useState('');
-    const [maxPass, setMaxPass] = useState(1);
+  const [address, setAddress] = useState('');
+  const [contaact, setContaact] = useState('');
+  const [addedPhotos, setAddedPhotos] = useState([]);
+  const [description, setDescription] = useState('');
+  const [perks, setPerks] = useState([]);
+  const [extraInfo, setExtraInfo] = useState('');
+  const [checkin, setCheckin] = useState('');
+  const [checkout, setCheckout] = useState('');
+  const [maxPass, setMaxPass] = useState(1);
+
+
+  useEffect(() => {
+    if(!id) {
+      return;
+    }
+    axios.get('/cars/'+id)
+    .then(response => {
+      const {data} = response;
+      setTitle(data.title);
+      setAddress(data.address);
+      setContaact(data.contaact);
+      setAddedPhotos(data.photos);
+      setDescription(data.description);
+      setPerks(data.perks);
+      setExtraInfo(data.extraInfo);
+      setCheckin(data.extraInfo);
+      setCheckout(data.checkout);
+      setMaxPass(data.maxPass);
+    })
+  }, [id])
 
     const navigate = useNavigate();
 

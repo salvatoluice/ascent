@@ -139,4 +139,10 @@ app.get('/cars', (req, res) => {
   });
 });
 
+app.get('/cars/:id', async (req,res) => {
+  // res.json(req.params)
+  const {id} = req.params;
+  res.json(await Cars.findById(id));
+})
+
 app.listen(4000);
