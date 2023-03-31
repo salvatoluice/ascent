@@ -118,20 +118,20 @@ app.post('/cars', (req, res) => {
   const {token} = req.cookies;
   const {
     title,address,addedPhotos,description,contaact,
-    perks,extraInfo,checkin,checkout,maxPass,
+    perks,extraInfo,dayprice,weekprice,maxPass,
   } = req.body;
   jwt.verify(token, jwtSecret, {}, async (err, userData) => {
     if (err) throw err;
     const carsDoc = await Cars.create({
       owner:userData.id,contaact,
       title,address,photos:addedPhotos,description,
-      perks,extraInfo,checkin,checkout,maxPass,
+      perks,extraInfo,dayprice,weekprice,maxPass,
     });
     res.json(carsDoc);
   });
 });
 
-app.get('/cars', (req, res) => {
+app.get('/user-cars', (req, res) => {
   const {token} = req.cookies;
   jwt.verify(token, jwtSecret, {}, async (err, userData) => {
     const {id} = userData;
@@ -150,7 +150,7 @@ app.put('/cars', async (req, res) => {
   const {token} = req.cookies;
   const {
     id, title,address,addedPhotos,description,contaact,
-    perks,extraInfo,checkin,checkout,maxPass,
+    perks,extraInfo,dayprice,weekprice,maxPass,
   } = req.body;
   jwt.verify(token, jwtSecret, {}, async (err, userData) => {
     const carsDoc = await Cars.findById(id);
@@ -158,12 +158,16 @@ app.put('/cars', async (req, res) => {
       carsDoc.set({
       contaact,
       title,address,photos:addedPhotos,description,
-      perks,extraInfo,checkin,checkout,maxPass,
+      perks,extraInfo,dayprice,weekprice,maxPass,
       })
       await carsDoc.save();
       res.json('ok')
     }
   });
-})
+});
+
+app.get('/cars', async (req, res) => {
+  res.json( await Cars.find())
+});
 
 app.listen(4000);

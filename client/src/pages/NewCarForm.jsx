@@ -7,7 +7,7 @@ import PhotoUploader from './PhotoUploader';
 
 const NewCarForm = () => {
   const {id} = useParams();
-  console.log(id);
+  // console.log(id);
   const [title, setTitle] = useState('');
   const [address, setAddress] = useState('');
   const [contaact, setContaact] = useState('');
@@ -15,9 +15,9 @@ const NewCarForm = () => {
   const [description, setDescription] = useState('');
   const [perks, setPerks] = useState([]);
   const [extraInfo, setExtraInfo] = useState('');
-  const [checkin, setCheckin] = useState('');
-  const [checkout, setCheckout] = useState('');
-  const [maxPass, setMaxPass] = useState(1);
+  const [weekprice, setWeekprice] = useState(10000);
+  const [dayprice, setDayprice] = useState(2000);
+  const [maxPass, setMaxPass] = useState(4);
 
 
   useEffect(() => {
@@ -34,8 +34,8 @@ const NewCarForm = () => {
       setDescription(data.description);
       setPerks(data.perks);
       setExtraInfo(data.extraInfo);
-      setCheckin(data.checkin);
-      setCheckout(data.checkout);
+      setDayprice(data.dayprice);
+      setWeekprice(data.weekprice);
       setMaxPass(data.maxPass);
     })
   }, [id])
@@ -66,7 +66,7 @@ const NewCarForm = () => {
       const carData = {
         title, address, contaact,
         addedPhotos, description, perks, 
-        extraInfo, checkin, checkout, 
+        extraInfo, dayprice, weekprice, 
         maxPass
       };
 
@@ -108,12 +108,12 @@ const NewCarForm = () => {
         {preInput('Number of Days', 'How many days can your car be rented? Max number of passengers your car can accommodate')}
         <div className='grid gap-2 sm:grid-cols-3'>
           <div>
-            <h3 className='mt-2 -mb-2'>First day available</h3>
-            <input type="text" placeholder='31/03/2023 19:00...' value={checkin} onChange={e => setCheckin(e.target.value)} />
+            <h3 className='mt-2 -mb-2'>Price per Day</h3>
+            <input type="text" placeholder='Input Price, i.e 2000... no letters' value={dayprice} onChange={e => setDayprice(e.target.value)} />
           </div>
           <div>
-            <h3 className='mt-2 -mb-1'>Last day/Return date</h3>
-            <input type="text" placeholder='31/03/2023 19:00...' value={checkout} onChange={e => setCheckout(e.target.value)} />
+            <h3 className='mt-2 -mb-1'>Price Per Week</h3>
+            <input type="text" placeholder='31/03/2023 19:00...' value={weekprice} onChange={e => setWeekprice(e.target.value)} />
           </div>
           <div>
             <h3 className='mt-2 -mb-1'>Number of passengers</h3>

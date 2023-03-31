@@ -9,8 +9,8 @@ const carSchema = new mongoose.Schema({
     description: String,
     perks: [String],
     extraInfo: String,
-    checkin: Number,
-    checkout: Number,
+    dayprice: Number,
+    weekprice: Number,
     maxPass: Number,
 });
 

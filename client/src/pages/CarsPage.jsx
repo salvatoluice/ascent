@@ -8,7 +8,7 @@ const CarsPage = () => {
     // console.log(action);
 
     useEffect(() => {
-        axios.get('/cars').then(({data}) => {
+        axios.get('/user-cars').then(({data}) => {
             // console.log('hello')
             setCars(data);
         });
