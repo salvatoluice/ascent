@@ -29,9 +29,9 @@ const CarsPage = () => {
         <div className='mt-4'>
             {cars.length > 0 && cars.map(car => (
                 <Link to={'/account/cars/'+car._id} className='flex bg-gray-100 cursor-pointer gap-4 p-4 rounded-2xl'>
-                    <div className='w-32 h-32 bg-gray-300 grow shrink-0'>
+                    <div className='flex w-32 h-32 bg-gray-300 grow shrink-0'>
                         {car.photos.length > 0 && (
-                            <img src={car.photos[0]} alt="" />
+                            <img className='object-cover' src={'http://localhost:4000/uploads/'+car.photos[0]} alt="" />
                             // <p>hello</p>
                         )}
                     </div>
