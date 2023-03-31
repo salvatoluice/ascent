@@ -71,6 +71,19 @@ const SingleCar = () => {
         </div>
         <button onClick={() => setShowAll(true)} className='absolute bottom-2 right-2 py-2 px-4 bg-white rounded-xl border-black shadow-shadow-md shadow-gray-500'>Show More Photos</button>
       </div>
+      <div className='my-4'>
+        <h2 className='font-semibold text-2xl'>Description</h2>
+        {car.description}
+      </div>
+      <div className=''>
+        <div>
+            <h2 className='font-semibold text-2xl'>Prices</h2>
+            <p className='text-gray-500'>The prices shown below are listed by the owner of this car. We don't take part in negotiating for the car price neither do we manipulate any information entered by the car owner. All prices are in  kenyan shillings.</p>
+            <span className='text-2xl'>Ksh. {car.dayprice}</span> /day <br />
+            <span className='text-2xl'>Ksh. {car.weekprice}</span> /week
+        </div>
+        <div></div>
+      </div>
     </div>
   )
 }
