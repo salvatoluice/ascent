@@ -145,4 +145,25 @@ app.get('/cars/:id', async (req,res) => {
   res.json(await Cars.findById(id));
 })
 
+app.put('/cars', async (req, res) => {
+  mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
+  const {token} = req.cookies;
+  const {
+    id, title,address,addedPhotos,description,contaact,
+    perks,extraInfo,checkin,checkout,maxPass,
+  } = req.body;
+  jwt.verify(token, jwtSecret, {}, async (err, userData) => {
+    const carsDoc = await Cars.findById(id);
+    if(userData.id === carsDoc.owner.toString()) {
+      carsDoc.set({
+      contaact,
+      title,address,photos:addedPhotos,description,
+      perks,extraInfo,checkin,checkout,maxPass,
+      })
+      await carsDoc.save();
+      res.json('ok')
+    }
+  });
+})
+
 app.listen(4000);
