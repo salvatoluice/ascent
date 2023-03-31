@@ -26,6 +26,7 @@ function App() {
           <Route path='/account/bookings' element={<Account />} />
           <Route path='/account/cars' element={<CarsPage />} />
           <Route path="/account/cars/new" element={<NewCarForm />} />
+          <Route path="/account/cars/:id" element={<NewCarForm />} />
         </Route>
       </Routes>
     </UserContextProvider>
