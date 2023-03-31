@@ -34,7 +34,7 @@ const NewCarForm = () => {
       setDescription(data.description);
       setPerks(data.perks);
       setExtraInfo(data.extraInfo);
-      setCheckin(data.extraInfo);
+      setCheckin(data.checkin);
       setCheckout(data.checkout);
       setMaxPass(data.maxPass);
     })
@@ -61,29 +61,34 @@ const NewCarForm = () => {
       );
     }
 
-    async function addNewCar(e){
+    async function saveCar(e){
       e.preventDefault();
-
       const carData = {
         title, address, contaact,
         addedPhotos, description, perks, 
         extraInfo, checkin, checkout, 
         maxPass
       };
-      await axios.post('/cars', {
-        title, address, contaact,
-        addedPhotos, description, perks, 
-        extraInfo, checkin, checkout, 
-        maxPass
-      });
-      navigate('/account/cars');
+
+      if (id) {
+        // Update car details
+        await axios.put('/cars', {
+          id, ...carData
+        });
+        navigate('/account/cars');
+      } else {
+        // Add new car
+        await axios.post('/cars', carData);
+        navigate('/account/cars');
+      }
+      
     }
 
 
   return (
     <div>
       <AccountNav />
-      <form onSubmit={addNewCar}>
+      <form onSubmit={saveCar}>
         {preInput('Title', 'Title and model of your car. Should be Short and descriptive')}
         <input type='text' placeholder='Car Name & Brand' value={title} onChange={e => setTitle(e.target.value)} />
         {preInput('Address', 'Address to your place')}
