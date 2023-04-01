@@ -74,8 +74,8 @@ const SingleCar = () => {
         </div>
         <button onClick={() => setShowAll(true)} className='absolute bottom-2 right-2 py-2 px-4 bg-white rounded-xl border-black shadow-shadow-md shadow-gray-500'>Show More Photos</button>
       </div>
-      <div className='my-4'>
-        <h2 className='font-semibold text-2xl'>Description & Price</h2>
+      <div className='my-4 border-b pb-2'>
+        <h2 className='font-semibold text-2xl '>Description & Price</h2>
         {car.description}
       </div>
       <div className='grid grid-cols-2 gap-2 mt-2'>
@@ -90,6 +90,7 @@ const SingleCar = () => {
             <div className="flex bg-gray-100 p-4 rounded-xl mb-2">
                 <h1 className=""><b>Ksh. {car.weekprice} /week</b></h1> <br />
             </div>
+            <h2 className='font-semibold bg-gray-100 p-4 rounded-xl mb-2'>No of Passengers: {car.maxPass}</h2>
             <button className="primary">Hire  Now</button>
         </div>
       </div>
