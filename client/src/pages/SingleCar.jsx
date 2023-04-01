@@ -57,17 +57,17 @@ const SingleCar = () => {
             <div>
                 {car.photos?.[0] && (
                     <div>
-                        <img className='aspect-square object-cover' src={'http://localhost:4000/uploads/'+car.photos?.[0]} alt="" />
+                        <img onClick={() => setShowAll(true)} className='aspect-square object-cover' src={'http://localhost:4000/uploads/'+car.photos?.[0]} alt="" />
                     </div>
                 )}
             </div>
             <div className='grid'>
                 {car.photos?.[1] && (
-                    <img className='aspect-square object-cover' src={'http://localhost:4000/uploads/'+car.photos?.[1]} alt="" />
+                    <img onClick={() => setShowAll(true)} className='aspect-square object-cover' src={'http://localhost:4000/uploads/'+car.photos?.[1]} alt="" />
                 )}
                 <div className='overflow-hidden'>
                     {car.photos?.[2] && (
-                        <img className='aspect-square object-cover relative top-2' src={'http://localhost:4000/uploads/'+car.photos?.[2]} alt="" />
+                        <img onClick={() => setShowAll(true)} className='aspect-square object-cover relative top-2' src={'http://localhost:4000/uploads/'+car.photos?.[2]} alt="" />
                     )}
                 </div>
             </div>
@@ -76,16 +76,18 @@ const SingleCar = () => {
       </div>
       <div className='my-4 border-b pb-2'>
         <h2 className='font-semibold text-2xl '>Description & Price</h2>
-        {car.description}
       </div>
-      <div className='grid grid-cols-2 gap-2 mt-2'>
+      <div className='grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mt-2'>
+      {/* {car.description} */}
         <div>
-            <p className='text-gray-500'>The prices shown below are listed by the owner of this car. We don't take part in negotiating for the car price neither do we manipulate any information entered by the car owner. All prices are in  kenyan shillings.</p>
+            <h5 className='mb-3 border-b pb-2 pt-3'>{car.description}</h5>
+            <h1 className='text-center font-bold'>- - - - - - - - - - - - - - - - - - - - - - - - -  - - -</h1>
+            <p className='text-gray-500'>The prices shown are listed by the owner of this car. We don't take part in negotiating for the car price neither do we manipulate any information entered by the car owner. All prices are in  kenyan shillings.</p>
         </div>
-        <div className='bg-white px-6 py-1 rounded-xl mt-4 w-200'>
+        <div className='bg-white px-6 py-1 rounded-xl mt-4 pb-6'>
             <h1 className="text-center font-bold mt-2">Prices</h1>
             <div className="flex bg-gray-100 p-4 rounded-xl mb-2 mt-2">
-                <h1 className="">Price: <b>Ksh. {car.dayprice} /day</b></h1> <br />
+                <h1 className=""><b>Ksh. {car.dayprice} /day</b></h1> <br />
             </div>
             <div className="flex bg-gray-100 p-4 rounded-xl mb-2">
                 <h1 className=""><b>Ksh. {car.weekprice} /week</b></h1> <br />
@@ -93,6 +95,11 @@ const SingleCar = () => {
             <h2 className='font-semibold bg-gray-100 p-4 rounded-xl mb-2'>No of Passengers: {car.maxPass}</h2>
             <button className="primary">Hire  Now</button>
         </div>
+      </div>
+      <div className="mt-4 bg-white -mx-8 px-8 py-4">
+        <h2 className='font-bold'>Extra Information</h2>
+        <h4 style={{fontStyle: 'italic'}}>The information in gray text below is provided by the car owner when registering their car with us. Copyright claims may apply.</h4>
+        <p className='text-gray-500'>"{car.extraInfo}"</p>
       </div>
     </div>
   )
