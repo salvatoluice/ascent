@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 const SingleCar = () => {
@@ -93,7 +93,7 @@ const SingleCar = () => {
                 <h1 className=""><b>Ksh. {car.weekprice} /week</b></h1> <br />
             </div>
             <h2 className='font-semibold bg-gray-100 p-4 rounded-xl mb-2'>No of Passengers: {car.maxPass}</h2>
-            <button className="primary">Hire  Now</button>
+            <Link to={`/cars/${car._id}/booking`}><button className="primary">Hire  Now</button></Link>
         </div>
       </div>
       <div className="mt-4 bg-white -mx-8 px-8 py-4">
