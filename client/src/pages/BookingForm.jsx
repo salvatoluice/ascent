@@ -55,7 +55,7 @@ const BookingForm = () => {
             <button className='primary'>
                 Reserve Now {numberOfDays > 0 && (
                     <span>
-                        @Ksh. {numberOfDays * car.dayprice}
+                        @Ksh. {(numberOfDays + 1) * car.dayprice}
                     </span>
                 )} 
             </button>

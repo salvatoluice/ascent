@@ -3,6 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const User = require('./models/User.js');
 const Cars = require('./models/Cars.js');
+const Booking = require('./models/Booking.js');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser')
@@ -168,6 +169,16 @@ app.put('/cars', async (req, res) => {
 
 app.get('/cars', async (req, res) => {
   res.json( await Cars.find())
+});
+
+app.post('/booking', (req, res) => {
+  const {car, checkin, checkout, number, name, email, price} = req.body;
+  Booking.create({
+    car, checkin, checkout, number, name, email, price
+  }).then((err, doc) => {
+    if (err) throw err;
+    res,json(doc);
+  });
 });
 
 app.listen(4000);
