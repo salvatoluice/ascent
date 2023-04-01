@@ -10,7 +10,7 @@ textarea {
     height: 140px;
 }
 
-form.book {
+.book {
     width: 450px;
     justify-content: center;
     align-items: center;

@@ -175,10 +175,11 @@ app.post('/booking', (req, res) => {
   const {car, checkin, checkout, number, name, email, price} = req.body;
   Booking.create({
     car, checkin, checkout, number, name, email, price
-  }).then((err, doc) => {
-    if (err) throw err;
-    res,json(doc);
-  });
+  }).then((doc) => {
+    res.json(doc);
+  }).catch((err) => {
+    throw err;
+  })
 });
 
 app.listen(4000);

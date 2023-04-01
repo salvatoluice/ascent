@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import {differenceInCalendarDays} from 'date-fns'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 const SingleCar = () => {
     const {id} = useParams();
     const [car, setCar] = useState([]);
-    const [showAll, setShowAll] = useState(false)
+    const [showAll, setShowAll] = useState(false);
+    const [showForm, setShowForm] = useState(false);
+    const [checkin, setCheckin] = useState('');
+    const [checkout, setCheckout] = useState('');
+    const [name, setName] = useState('');
+    const [number, setNumber] = useState('');
+    const [email, setEmail] = useState('');
+    const navigate = useNavigate();
     useEffect(() => {
         if(!id) {
             return;
@@ -16,6 +24,21 @@ const SingleCar = () => {
     }, [id]);
 
     if(!car) return '';
+
+    let numberOfDays = 0;
+    if (checkin && checkout) {
+        numberOfDays = differenceInCalendarDays(new Date(checkout), new Date(checkin));
+    }
+
+    async function bookThisPlace() {
+        const response = await axios.post('/booking', {
+          checkin,checkout,number,name,email,
+          car:car._id,
+          price:numberOfDays * car.dayprice,
+        });
+        const bookingId = response.data._id;
+        navigate(`/account/bookings/${bookingId}`);
+      }
 
     if (showAll) {
         return (
@@ -38,6 +61,42 @@ const SingleCar = () => {
                 </div>
             </div>
         );
+    }
+
+    if (showForm) {
+        return (
+            <div className="book">
+            <h1 className='text-center font-bold text-2xl'>Book This Car </h1>
+            <p className='text-center italic'>{car.title}</p>
+            <div className="grid py-3 px-4">
+                <label className='font-semibold'>Full Name:</label>
+                <input type="text" placeholder='E.g John Doe' value={name} onChange={e => setName(e.target.value)} />
+            </div>
+            <div className="grid py-3 px-4">
+                <label className='font-semibold'>Phone Number:</label>
+                <input type="number" placeholder='07XXXXXXXX' value={number} onChange={e => setNumber(e.target.value)} />
+            </div>
+            <div className="grid py-3 px-4">
+                <label className='font-semibold'>Email Address:</label>
+                <input type="email" placeholder='example@gmail.com' value={email} onChange={e => setEmail(e.target.value)} />
+            </div>
+            <div className="grid py-3 px-4">
+                <label className='font-semibold'>Pick up date:</label>
+                <input type="date" required value={checkin} onChange={e => setCheckin(e.target.value)} />
+            </div>
+            <div className="grid py-3 px-4">
+                <label className='font-semibold'>Return date:</label>
+                <input type="date" required value={checkout} onChange={e => setCheckout(e.target.value)} />
+            </div>
+            <button onClick={bookThisPlace} className='primary'>
+                Reserve Now {numberOfDays > 0 && (
+                    <span>
+                        @Ksh. {numberOfDays * car.dayprice}
+                    </span>
+                )} 
+            </button>
+        </div>
+        )
     }
 
 
@@ -93,7 +152,7 @@ const SingleCar = () => {
                 <h1 className=""><b>Ksh. {car.weekprice} /week</b></h1> <br />
             </div>
             <h2 className='font-semibold bg-gray-100 p-4 rounded-xl mb-2'>No of Passengers: {car.maxPass}</h2>
-            <Link to={`/cars/${car._id}/booking`}><button className="primary">Reserve Now</button></Link>
+            <button onClick={() => setShowForm(true)} type='submit' className="primary">Reserve Now</button>
         </div>
       </div>
       <div className="mt-4 bg-white -mx-8 px-8 py-4">
