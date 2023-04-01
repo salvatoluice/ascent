@@ -10,6 +10,16 @@ textarea {
     height: 140px;
 }
 
+form.book {
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 0.5px solid #dbd9d9;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
 button {
     @apply bg-gray-300
 }
