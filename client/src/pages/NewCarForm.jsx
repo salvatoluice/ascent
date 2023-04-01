@@ -123,7 +123,7 @@ const NewCarForm = () => {
         <button className='primary my-4'>Save</button>
       </form>
     </div>
-  )
+  ) 
 }
 
 export default NewCarForm
