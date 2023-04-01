@@ -95,7 +95,7 @@ const NewCarForm = () => {
         <input type="text" placeholder='Address' value={address} onChange={e => setAddress(e.target.value)} />
         {preInput('Contact', 'Your Mobile Phone Number')}
         <input type="text" placeholder='Phone number, +254...' value={contaact} onChange={e => setContaact(e.target.value)} />
-        {preInput('Photos', 'Upload descriptive  photos kindly')}
+        {preInput('Photos', 'Upload descriptive  photos. The more, the better.')}
         <PhotoUploader addedPhotos={addedPhotos} onChange={setAddedPhotos} />
         {preInput('Description', 'Provide More Info about this car. Be detailed as possible')}
         <textarea value={description} onChange={e => setDescription(e.target.value)}/>
