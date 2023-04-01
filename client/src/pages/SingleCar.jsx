@@ -93,12 +93,12 @@ const SingleCar = () => {
                 <h1 className=""><b>Ksh. {car.weekprice} /week</b></h1> <br />
             </div>
             <h2 className='font-semibold bg-gray-100 p-4 rounded-xl mb-2'>No of Passengers: {car.maxPass}</h2>
-            <Link to={`/cars/${car._id}/booking`}><button className="primary">Hire  Now</button></Link>
+            <Link to={`/cars/${car._id}/booking`}><button className="primary">Reserve Now</button></Link>
         </div>
       </div>
       <div className="mt-4 bg-white -mx-8 px-8 py-4">
         <h2 className='font-bold'>Extra Information</h2>
-        <h4 style={{fontStyle: 'italic'}}>The information in gray text below is provided by the car owner when registering their car with us. Copyright claims may apply.</h4>
+        <h4 className='italic'>The information in gray text below is provided by the car owner when registering their car with us. Copyright claims may apply.</h4>
         <p className='text-gray-500'>"{car.extraInfo}"</p>
       </div>
     </div>
