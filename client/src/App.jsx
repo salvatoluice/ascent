@@ -10,6 +10,7 @@ import Account from './pages/Account'
 import NewCarForm from './pages/NewCarForm'
 import CarsPage from './pages/CarsPage'
 import SingleCar from './pages/SingleCar'
+import Bookings from './pages/Bookings'
 
 axios.defaults.baseURL = "http://127.0.0.1:4000";
 axios.defaults.withCredentials = true;
@@ -24,7 +25,7 @@ function App() {
           <Route path='/login' element={<LoginPage />} />
           <Route path='/register' element={<Register />} />
           <Route path='/account' element={<Account />} />
-          <Route path='/account/bookings' element={<Account />} />
+          <Route path='/account/bookings' element={<Bookings />} />
           <Route path='/account/bookings/:id' element={<Account />} />
           <Route path='/account/cars' element={<CarsPage />} />
           <Route path="/account/cars/new" element={<NewCarForm />} />
