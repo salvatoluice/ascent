@@ -46,11 +46,11 @@ const BookingForm = () => {
             </div>
             <div className="grid py-3 px-4">
                 <label className='font-semibold'>Pick up date:</label>
-                <input type="date" value={checkin} onChange={e => setCheckin(e.target.value)} />
+                <input type="date" required value={checkin} onChange={e => setCheckin(e.target.value)} />
             </div>
             <div className="grid py-3 px-4">
                 <label className='font-semibold'>Return date:</label>
-                <input type="date" value={checkout} onChange={e => setCheckout(e.target.value)} />
+                <input type="date" required value={checkout} onChange={e => setCheckout(e.target.value)} />
             </div>
             <button className='primary'>
                 Reserve Now {numberOfDays > 0 && (
