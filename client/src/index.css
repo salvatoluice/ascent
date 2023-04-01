@@ -18,6 +18,7 @@ textarea {
     border: 0.5px solid #dbd9d9;
     padding: 1rem;
     border-radius: 10px;
+    margin-top: 1rem;
 }
 
 button {
