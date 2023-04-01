@@ -75,15 +75,15 @@ const SingleCar = () => {
                 <p className='text-center italic'>{car.title}</p>
                 <div className="grid py-3 px-4">
                     <label className='font-semibold'>Full Name:</label>
-                    <input type="text" placeholder='E.g John Doe' value={name} onChange={e => setName(e.target.value)} />
+                    <input type="text" required placeholder='E.g John Doe' value={name} onChange={e => setName(e.target.value)} />
                 </div>
                 <div className="grid py-3 px-4">
                     <label className='font-semibold'>Phone Number:</label>
-                    <input type="number" placeholder='07XXXXXXXX' value={number} onChange={e => setNumber(e.target.value)} />
+                    <input type="number" required placeholder='07XXXXXXXX' value={number} onChange={e => setNumber(e.target.value)} />
                 </div>
                 <div className="grid py-3 px-4">
                     <label className='font-semibold'>Email Address:</label>
-                    <input type="email" placeholder='example@gmail.com' value={email} onChange={e => setEmail(e.target.value)} />
+                    <input type="email" required placeholder='example@gmail.com' value={email} onChange={e => setEmail(e.target.value)} />
                 </div>
                 <div className="grid py-3 px-4">
                     <label className='font-semibold'>Pick up date:</label>
