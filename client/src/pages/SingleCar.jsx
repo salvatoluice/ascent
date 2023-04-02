@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {differenceInCalendarDays} from 'date-fns'
 import { useNavigate, useParams } from 'react-router-dom'
+import {UserContext} from '../UserContext.jsx'
 import axios from 'axios'
 
 const SingleCar = () => {
@@ -14,6 +15,16 @@ const SingleCar = () => {
     const [number, setNumber] = useState('');
     const [email, setEmail] = useState('');
     const navigate = useNavigate();
+
+    const {user} = useContext(UserContext);
+
+    useEffect(() => {
+        if (user) {
+            setName(user.name);
+            setEmail(user.email);
+        }
+    }, [user])
+    
     useEffect(() => {
         if(!id) {
             return;
