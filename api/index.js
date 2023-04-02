@@ -32,6 +32,15 @@ app.use(cors({
 //     res.json('test is ok')
 // });
 
+function getUserDataFromToken(req) {
+  return new Promise((resolve, reject) => {
+    jwt.verify(req.cookies.token, jwtSecret, {}, async (err, userData) => {
+      if (err) throw err;
+      resolve(userData)
+    });
+  });
+}
+
 app.post('/register', async (req, res) => {
     mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
     const {name,email,password} = req.body;
@@ -171,15 +180,23 @@ app.get('/cars', async (req, res) => {
   res.json( await Cars.find())
 });
 
-app.post('/booking', (req, res) => {
+app.post('/booking', async (req, res) => {
+  const userData = await getUserDataFromToken(req);
   const {car, checkin, checkout, number, name, email, price} = req.body;
   Booking.create({
-    car, checkin, checkout, number, name, email, price
+    car, checkin, checkout, number, name, email, price,
+    user:userData.id,
   }).then((doc) => {
     res.json(doc);
   }).catch((err) => {
     throw err;
   })
 });
+
+app.get('/booking', async (req, res) => {
+  const userData = await getUserDataFromToken(req);
+  res.json( await Booking.find({user:userData.id}) )
+})
+
 
 app.listen(4000);
