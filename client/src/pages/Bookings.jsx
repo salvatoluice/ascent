@@ -1,9 +1,13 @@
 import React from 'react'
+import AccountNav from './AccountNav'
 
 const Bookings = () => {
   return (
     <div>
-      My Bookings here
+      <AccountNav />
+      <div>
+        
+      </div>
     </div>
   )
 }
