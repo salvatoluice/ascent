@@ -162,7 +162,7 @@ app.put('/cars', async (req, res) => {
       perks,extraInfo,dayprice,weekprice,maxPass,
       })
       await carsDoc.save();
-      res.json('ok')
+      res.json('ok');
     }
   });
 });
