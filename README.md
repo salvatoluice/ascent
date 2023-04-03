@@ -11,10 +11,18 @@ We are also connecting you to our experienced mechanics that are all over the co
 *About the project*
 
 *Built with
+
 *Getting started
+
 *Prerequisites
+
 *Usage
+
 *Roadmap
+
 *Contributions
+
 *License
+
 *...
+
