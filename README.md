@@ -8,6 +8,7 @@ From connecting you to individuals who might rent you a car, giving you personal
 We are also connecting you to our experienced mechanics that are all over the country at just a tap of a button. Ascent, the smartest way to live.
 
 **Table of content**
+
 *About the project*
 
 *Built with
