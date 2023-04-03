@@ -5,7 +5,7 @@ const CarImg = ({car, index=0, className=null}) => {
         return '';
     } 
     if (!className){
-        className = 'object-cover'
+        className = 'object-cover h-36'
     }
     return (
         <img className={className} src={'http://localhost:4000/uploads/'+car.photos[index]} alt="" />

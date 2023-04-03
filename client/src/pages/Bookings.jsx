@@ -15,10 +15,10 @@ const Bookings = () => {
   return (
     <div>
       <AccountNav />
-      <div>
+      <div className='gap-2'>
         {bookings?.length > 0 && bookings.map(booking => (
-          <Link to={`/account/bookings/${booking._id}`} className='flex gap-4 bg-gray-200 rounded-xl overflow-hidden'>
-            <div className='w-48'>
+          <Link to={`/account/bookings/${booking._id}`} className='flex gap-4 bg-gray-200 rounded-xl overflow-hidden mb-2'>
+            <div className='w-48 h-30'>
               <CarImg car={booking.car} />
             </div>
             <div className='py-3 pr-2 pb-0 grow'>
