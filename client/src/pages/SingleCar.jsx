@@ -98,16 +98,15 @@ const SingleCar = () => {
   return (
     <div className='mt-4 pt-4 bg-gray-100 -mx-8 px-8 py-8'>
       <h1 className='text-2xl'>{car.title}</h1>
-      <div className='flex gap-4'>
+      <div className='flex gap-4 items-center'>
       <AddressLink>{car.address}</AddressLink>
-        <h3 className='my-2 gap-1'> Phone no: <b>{car.contaact}</b></h3>
+        <h3 className='my-2'> Phone no: <b>{car.contaact}</b></h3>
       </div>
       <CarGallery car={car} />
       <div className='my-4 border-b pb-2'>
         <h2 className='font-semibold text-2xl '>Description & Price</h2>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mt-2'>
-      {/* {car.description} */}
         <div>
             <h5 className='mb-3 border-b pb-2 pt-3'>{car.description}</h5>
             <h1 className='text-center font-bold'>- - - - - - - - - - - - - - - - - - - - - - - - -  - - -</h1>
