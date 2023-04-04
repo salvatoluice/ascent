@@ -99,7 +99,7 @@ const SingleCar = () => {
     <div className='mt-4 pt-4 bg-gray-100 -mx-8 px-8 py-8'>
       <h1 className='text-2xl'>{car.title}</h1>
       <div className='flex gap-4'>
-        <AddressLink car={car} />
+      <AddressLink>{car.address}</AddressLink>
         <h3 className='my-2 gap-1'> Phone no: <b>{car.contaact}</b></h3>
       </div>
       <CarGallery car={car} />
