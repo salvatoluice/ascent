@@ -29,3 +29,16 @@ button.primary {
     background-color: #F53850;
     @apply bg-primary p-2 w-full text-white rounded-md
 }
+
+.about {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.about img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
