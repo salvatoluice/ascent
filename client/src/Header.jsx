@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import Navbar from './Navbar.jsx';
 import {UserContext} from './UserContext.jsx'
 
 const Header = () => {
@@ -40,6 +41,7 @@ const Header = () => {
             )}
           </Link>
         </header>
+        <Navbar />
     </div>
   )
 }
