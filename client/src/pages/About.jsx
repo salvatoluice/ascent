@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <div className='my-4'>
-      <div className='flex about'>
+      <div className='flex about gap-4 md:flex-col sm:flex-col'>
         <div style={{width: '100%'}} className='flex'>
             <img className='rounded-xl' src="https://images.unsplash.com/photo-1570733577524-3a047079e80d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWVyY2VkZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60" alt="" />
         </div>
