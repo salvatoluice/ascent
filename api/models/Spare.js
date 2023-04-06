@@ -9,7 +9,7 @@ const spareSchema = new mongoose.Schema({
     supplier: String,
     feature: String,
     price: Number,
-    image: Number,
+    image: String,
 });
 
 const SpareSchema = mongoose.model('Spare', spareSchema);

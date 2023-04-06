@@ -10,7 +10,7 @@ const cookieParser = require('cookie-parser')
 const imageDownloader = require('image-downloader');
 const multer = require('multer');
 const fs = require('fs'); 
-const Mechanic = require('./models/Mechanic.js');
+const Spare = require('./models/Spare.js');
 // const mime = require('mime-types');
 require('dotenv').config();
 const app = express();
@@ -199,13 +199,11 @@ app.get('/booking', async (req, res) => {
   res.json( await Booking.find({user:userData.id}).populate('car'))
 })
 
-app.post('/mechanic', async (req, res) => {
+app.post('/spares', async (req, res) => {
   mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
-  const userData = await getUserDataFromToken(req);
-  const {photo, name, contaact, intro, email, number, location, availability, experience} = req.body;
-  Mechanic.create({
-    photo, name, email, contaact, intro, number, location, availability, experience,
-    user:userData.id,
+  const {title, type, category, description, manufacturer, supplier, features, image, price} = req.body;
+  Spare.create({
+    title, type, category, description, manufacturer, supplier, features, image, price,
   }).then((doc) => {
     res.json(doc);
   }).catch((err) => {
