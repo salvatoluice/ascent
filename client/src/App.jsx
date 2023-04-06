@@ -35,7 +35,6 @@ function App() {
           <Route path="/account/cars/:id" element={<NewCarForm />} />
           <Route path="/cars/:id" element={<SingleCar />} />
           <Route path='/about' element={<About />} />
-          <Route path='/mechanic' element={<Mechanic />} />
         </Route>
       </Routes>
     </UserContextProvider>
