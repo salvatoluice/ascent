@@ -181,7 +181,7 @@ app.get('/cars', async (req, res) => {
   res.json( await Cars.find())
 });
 
-app.post('/booking', async (req, res) => {
+app.patch('/booking', async (req, res) => {
   const userData = await getUserDataFromToken(req);
   const {car, checkin, checkout, number, name, email, price} = req.body;
   Booking.create({
@@ -211,8 +211,20 @@ app.post('/spares', async (req, res) => {
   })
 });
 
+app.put('/spares', async (req, res) => {
+  mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
+  const {title, type, category, description, manufacturer, supplier, features, image, price} = req.body;
+  Spare.create({
+    title, type, category, description, manufacturer, supplier, features, image, price,
+  }).then((doc) => {
+    res.json(doc);
+  }).catch((err) => {
+    throw err;
+  })
+});
+
 app.get('/spares', async (req, res) => {
   res.json( await Spare.find())
-});
+})
 
 app.listen(4000);

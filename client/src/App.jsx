@@ -15,6 +15,7 @@ import SingleBooking from './pages/SingleBooking'
 import About from './pages/About'
 import Spares from './pages/Spares'
 import NewSpareForm from './pages/spares/NewSpareForm'
+import Toyota from './pages/spares/Toyota'
 
 axios.defaults.baseURL = "http://127.0.0.1:4000";
 axios.defaults.withCredentials = true;
@@ -38,6 +39,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/spares' element={<Spares />} />
           <Route path='/spares/new' element={<NewSpareForm />} />
+          <Route path='/spares/toyota' element={<Toyota />} />
         </Route>
       </Routes>
     </UserContextProvider>
