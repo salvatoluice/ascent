@@ -211,4 +211,8 @@ app.post('/spares', async (req, res) => {
   })
 });
 
+app.get('/spares', async (req, res) => {
+  res.json( await Spare.find())
+});
+
 app.listen(4000);
