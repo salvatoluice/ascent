@@ -225,6 +225,12 @@ app.put('/spares', async (req, res) => {
 
 app.get('/spares', async (req, res) => {
   res.json( await Spare.find())
+});
+
+app.get('/spares/:id', async (req,res) => {
+  // res.json(req.params)
+  const {id} = req.params;
+  res.json(await Spare.findById(id));
 })
 
 app.listen(4000);
