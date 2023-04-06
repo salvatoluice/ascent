@@ -10,6 +10,7 @@ const cookieParser = require('cookie-parser')
 const imageDownloader = require('image-downloader');
 const multer = require('multer');
 const fs = require('fs'); 
+const Mechanic = require('./models/Mechanic.js');
 // const mime = require('mime-types');
 require('dotenv').config();
 const app = express();
