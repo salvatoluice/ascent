@@ -201,9 +201,9 @@ app.get('/booking', async (req, res) => {
 app.post('/mechanic', async (req, res) => {
   mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
   const userData = await getUserDataFromToken(req);
-  const {photo, name, email, number, location, availability, experience} = req.body;
+  const {photo, name, contaact, intro, email, number, location, availability, experience} = req.body;
   Mechanic.create({
-    photo, name, email, number, location, availability, experience,
+    photo, name, email, contaact, intro, number, location, availability, experience,
     user:userData.id,
   }).then((doc) => {
     res.json(doc);
