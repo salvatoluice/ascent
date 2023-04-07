@@ -31,4 +31,4 @@ We are also connecting you to our experienced mechanics that are all over the co
 
 ## About the project
 
-This project is built to suit the users of everyone, wheather you own a car or not
+This project is built to suit the users of everyone, wheather you own a car or not. We are changing the scope of the motor industry through great innovations for every single person.
