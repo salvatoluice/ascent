@@ -1,5 +1,5 @@
 # Ascent
-We got all you need.
+Revolutionalizing motor industry through tech
 
 Author & Founder: **Salvato Luis**
 
