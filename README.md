@@ -7,7 +7,7 @@ Author & Founder: **Salvato Luis**
 
 From connecting you to individuals who might rent you a car, giving you personal rides at any consvenient time and place, to providing you a convenient online store for all car parts. Try us out for a better experience. A 24 hr customer support and consistent team work is our mission. Making your lifestyle better is our passion.
 
-We are also connecting you to our experienced mechanics that are all over the country at just a tap of a button.
+We are also developing an online car spares store for deiveries all over the country at just a tap of a button.
 
 **Table of contents**
 
@@ -21,8 +21,6 @@ We are also connecting you to our experienced mechanics that are all over the co
 
 *Usage
 
-*Roadmap
-
 *Contributions
 
 *License
@@ -31,4 +29,4 @@ We are also connecting you to our experienced mechanics that are all over the co
 
 ## About the project
 
-This project is built to suit the users of everyone, wheather you own a car or not. We are changing the scope of the motor industry through great innovations for every single person.
+This project is built to suit the users of everyone, wheather you own a car or not. We are changing the scope of the motor industry through great innovations.
