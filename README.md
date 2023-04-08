@@ -21,8 +21,6 @@ We are also connecting you to our experienced mechanics that are all over the co
 
 *Usage
 
-*Roadmap
-
 *Contributions
 
 *License
