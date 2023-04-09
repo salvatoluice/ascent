@@ -1,5 +1,5 @@
 # ascent
-Revolutionalizing the motor industry through tech
+Revolutionalizing the motor industry through technology
 
 Author & Founder: **Salvato Luis**
 
