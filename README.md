@@ -1,7 +1,7 @@
 # ascent
 Revolutionalizing the motor industry through technology
 
-Author : **Salvato Luis**
+Author & Founder : **Salvato Luis**
 
 **All rights reserved. All data here is subjec to copyright**
 
