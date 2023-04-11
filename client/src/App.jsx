@@ -17,6 +17,7 @@ import Spares from './pages/Spares'
 import NewSpareForm from './pages/spares/NewSpareForm'
 import Toyota from './pages/spares/Toyota'
 import SingleSpare from './pages/spares/SingleSpare'
+import Mercedes from './pages/spares/Mercedes'
 
 
 axios.defaults.baseURL = "http://127.0.0.1:4000";
@@ -42,6 +43,7 @@ function App() {
           <Route path='/spares' element={<Spares />} />
           <Route path='/spares/new' element={<NewSpareForm />} />
           <Route path='/spares/toyota' element={<Toyota />} />
+          <Route path='/spares/mercedes' element={<Mercedes />} />
           <Route path='/spares/:id' element={<SingleSpare />} />
         </Route>
       </Routes>

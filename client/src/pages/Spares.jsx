@@ -5,16 +5,16 @@ const Spares = () => {
   return (
     <div>
       <h2 className='text-center text-2xl font-semibold'>We stock genuine car parts for Toyota and all major brands</h2>
-      <p className='text-center py-4 text-gray-400'>Explore collection below. Free deliveries within Nairobi CBD.</p>
+      <p className='text-center py-4 text-gray-400'>Explore collection below. Free deliveries within Nairobi CBD. <span className='font-semibold text-black'>Select your car below</span></p>
       <div className='flex flex-wrap w-full justify-center gap-8'>
         <Link to={'/spares/toyota'} className='flex flex-col gap-1 shadow shadow-gray-500 rounded-sm p-2 text-center hover:shadow shadow-gray-600'>
             <img className='w-48 h-48 object-cover' src="https://images.unsplash.com/photo-1611919006980-8d937d6dfd6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8VG95b3RhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60" alt="" />
             <p className='font-semibold'>Toyota</p>
         </Link>
-        <div className='flex flex-col gap-1 shadow shadow-gray-500 rounded-sm p-2 text-center'>
+        <Link to='/spares/mercedes' className='flex flex-col gap-1 shadow shadow-gray-500 rounded-sm p-2 text-center'>
             <img className='w-48 h-48 object-cover' src="https://images.unsplash.com/photo-1583870908951-71149f42bcf9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVyY2VkZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" />
             <p className='font-semibold'>Mercedes</p>
-        </div>
+        </Link>
         <div className='flex flex-col gap-1 shadow shadow-gray-500 rounded-sm p-2 text-center'>
             <img className='w-48 h-48 object-cover' src="https://images.unsplash.com/photo-1538690560694-c770d02e202c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJtd3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
             <p className='font-semibold'>BMW</p>
@@ -35,6 +35,10 @@ const Spares = () => {
             <img className='w-48 h-48 object-cover' src="https://images.unsplash.com/photo-1615849577141-3397907d4ca5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWF6ZGF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" />
             <p className='font-semibold'>Mazda</p>
         </div>
+      </div>
+      <div className='py-6'>
+        <h1 className='text-4xl font-bold text-center'>Try Us Today</h1>
+        <h3 className='text-3xl font-semiold py-4'>Elevating Your car experience by bringing you car spares <br /> <span className="text-rose-500 italic">to your door step</span></h3>
       </div>
     </div>
   )
