@@ -219,12 +219,12 @@ const Section = styled.section`
       align-items: center;
       gap: 2rem;
       svg {
-        color: #ffc107;
+        color: #F53850;
         font-size: 2rem;
       }
       span {
         font-size: 2rem;
-        color: #ffc107;
+        color: #F53850;
         font-family: "Permanent Marker", cursive;
       }
     }
@@ -240,7 +240,7 @@ const Section = styled.section`
           padding: 0.6rem 1rem;
           border-radius: 0.6rem;
           &:hover {
-            background-color: #ffc107;
+            background-color: #F53850;
             a {
               color: black;
             }
@@ -253,7 +253,7 @@ const Section = styled.section`
           }
         }
         .active {
-          background-color: #ffc107;
+          background-color: #F53850;
           a {
             color: black;
           }

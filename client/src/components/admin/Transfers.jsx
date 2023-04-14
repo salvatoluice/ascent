@@ -64,7 +64,7 @@ const Section = styled.section`
   gap: 1rem;
   .title {
     h2 {
-      color: #ffc107;
+      color: #F53850;
       font-family: "Permanent Marker", cursive;
       letter-spacing: 0.3rem;
     }
@@ -98,13 +98,13 @@ const Section = styled.section`
         text-align: center;
         transition: 0.3s ease-in-out;
         &:hover {
-          background-color: #ffc107;
+          background-color: #F53850;
           span {
             color: black;
           }
         }
         span {
-          color: #ffc107;
+          color: #F53850;
         }
       }
     }
@@ -115,7 +115,7 @@ const Section = styled.section`
     justify-content: flex-end;
     align-items: center;
     text-decoration: none;
-    color: #ffc107;
+    color: #F53850;
     font-weight: bold;
     margin-top: 1rem;
     gap: 0.5rem;

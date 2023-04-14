@@ -25,7 +25,7 @@ const Nav = styled.nav`
     h1 {
       span {
         margin-left: 0.5rem;
-        color: #ffc107;
+        color: #F53850;
         font-family: "Permanent Marker", cursive;
         letter-spacing: 0.2rem;
       }
@@ -39,19 +39,19 @@ const Nav = styled.nav`
     padding: 1rem 8rem 1rem 1rem;
     border-radius: 1rem;
     svg {
-      color: #ffc107;
+      color: #F53850;
     }
     input {
       background-color: transparent;
       border: none;
-      color: #ffc107;
+      color: #F53850;
       font-family: "Permanent Marker", cursive;
       letter-spacing: 0.3rem;
       &:focus {
         outline: none;
       }
       &::placeholder {
-        color: #ffc107;
+        color: #F53850;
         font-family: "Permanent Marker", cursive;
       }
     }

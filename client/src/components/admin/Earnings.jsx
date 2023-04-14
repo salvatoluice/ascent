@@ -215,13 +215,13 @@ const Section = styled.section`
         border-radius: 1rem;
         transition: 0.3s ease-in-out;
         &:hover {
-          background-color: #ffc107;
+          background-color: #F53850;
           span {
             color: black;
           }
         }
         span {
-          color: #ffc107;
+          color: #F53850;
         }
       }
     }
