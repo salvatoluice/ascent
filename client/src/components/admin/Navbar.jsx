@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { BiSearch } from "react-icons/bi";
+import { UserContext } from "../../UserContext";
 export default function Navbar() {
+  const {user} = useContext(UserContext);
   return (
     <Nav>
       <div className="title">
-        <h4>Hi Kishan,</h4>
+        <h4>Hi {user?.name},</h4>
         <h1>
-          Welcome to <span>MY TAXI DASHBOARD</span>
+          Welcome to <span>ascent admin dashboard</span>
         </h1>
       </div>
       <div className="search">
