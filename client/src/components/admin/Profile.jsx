@@ -1,31 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import image from "../../assets/profile.jpeg";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { cardStyles } from "./ReusableStyles";
+import { UserContext } from "../../UserContext";
 export default function Profile() {
+  const {user} = useContext(UserContext);
   return (
     <Section>
       <div className="image">
         <img src={image} alt="" />
       </div>
       <div className="title">
-        <h2>Kishan Sheth</h2>
+        <h2>{user?.name}</h2>
         <h5>
-          <HiOutlineLocationMarker /> New York, USA
+          <HiOutlineLocationMarker /> Nairobi, Kenya
         </h5>
       </div>
       <div className="info">
         <div className="container">
-          <h5>Days at work</h5>
+          <h5>Days worked</h5>
           <h3>28</h3>
         </div>
         <div className="container">
-          <h5>Rides</h5>
+          <h5>cars registered</h5>
           <h3>427</h3>
         </div>
         <div className="container">
-          <h5>Hours</h5>
+          <h5>Hours worked</h5>
           <h3>76</h3>
         </div>
       </div>
