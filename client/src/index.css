@@ -82,3 +82,7 @@ button.primary {
     visibility: visible !important;
     right: 0 !important;
   }
+
+  .head:hover {
+    color: #F53850
+  }
