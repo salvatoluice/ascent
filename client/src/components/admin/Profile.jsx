@@ -8,6 +8,7 @@ export default function Profile() {
   const {user} = useContext(UserContext);
   return (
     <Section>
+      <h2 style={{color: '#F53850'}}>YOUR POFILE</h2>
       <div className="image">
         <img src={image} alt="" />
       </div>
@@ -40,6 +41,9 @@ const Section = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  h2 {
+    font-family: "Permanent Marker", cursive;
+  }
   .image {
     max-height: 10rem;
     overflow: hidden;
