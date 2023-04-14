@@ -183,7 +183,7 @@ export default function Earnings() {
               animationDuration={2000}
               type="monotone"
               dataKey="data"
-              stroke="#ffc107"
+              stroke="#F53850"
               fill="#8068233e"
               strokeWidth={4}
             />
