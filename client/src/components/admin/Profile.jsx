@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import image from "../assets/profile.jpeg";
+import image from "../../assets/profile.jpeg";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { cardStyles } from "./ReusableStyles";
 export default function Profile() {

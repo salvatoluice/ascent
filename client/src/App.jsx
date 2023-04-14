@@ -18,14 +18,17 @@ import NewSpareForm from './pages/spares/NewSpareForm'
 import Toyota from './pages/spares/Toyota'
 import SingleSpare from './pages/spares/SingleSpare'
 import Mercedes from './pages/spares/Mercedes'
-// import Admin from './components/admin/Admin'
-
+import Admin from './components/admin/Admin'
+import styled from "styled-components"
 
 axios.defaults.baseURL = "http://127.0.0.1:4000";
 axios.defaults.withCredentials = true;
 
 
 function App() {
+  const Div = styled.div`
+  position: relative;
+`;
   return (
     <UserContextProvider>
       <Routes>
@@ -46,7 +49,9 @@ function App() {
           <Route path='/spares/toyota' element={<Toyota />} />
           <Route path='/spares/mercedes' element={<Mercedes />} />
           <Route path='/spares/:id' element={<SingleSpare />} />
-          {/* <Route path='/admin' element={<Admin />} /> */}
+          {/* <Div> */}
+            <Route path='/admin' element={<Admin />} />
+          {/* </Div> */}    
         </Route>
       </Routes>
     </UserContextProvider>

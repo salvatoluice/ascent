@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import avatarImage from "../assets/avatarImage.jpeg";
+import avatarImage from "../../assets/avatarImage.jpeg";
 import { cardStyles } from "./ReusableStyles";
 
 export default function Transfers() {
