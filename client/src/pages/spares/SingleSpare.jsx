@@ -21,12 +21,12 @@ const SingleSpare = () => {
                 <img className='w-96 mx-4' src={spare.image} alt="" />
             </div>
             <div className='flex flex-col items-left'>
-                <h1 className='text-3xl font-bold'>{spare.title}</h1>
-                <h2 className='text-xl font-semibold py-2'>{spare.features}</h2>
-                <p>Car: <span className='font-semibold'>{spare.type}</span></p>
-                <p>Manufacturer: <span className='font-semibold py-2'>{spare.manufacturer}</span></p>
-                <p className='text-xl'>Supplier: <span className='font-semibold'>{spare.supplier}</span> </p>
-                <p className='italic text-xl pb-4'>Price: <span className='font-semibold'>Ksh. {spare.price}</span> </p>
+                <h1 className='text-3xl text-black font-bold'>{spare.title}</h1>
+                <h2 className='text-xl text-black font-semibold py-2'>{spare.features}</h2>
+                <p className='text-black'>Car: <span className='font-semibold'>{spare.type}</span></p>
+                <p className='text-black'>Manufacturer: <span className='font-semibold py-2'>{spare.manufacturer}</span></p>
+                <p className='text-xl text-black'>Supplier: <span className='font-semibold'>{spare.supplier}</span> </p>
+                <p className='italic text-black text-xl pb-4'>Price: <span className='font-semibold'>Ksh. {spare.price}</span> </p>
                 <button className='primary'>Add to Cart</button>
             </div>
         </div>
