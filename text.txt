@@ -1,0 +1,6 @@
+# Data transfer - contact - discharge
+
+Vitals -> Login, patient & doctor
+
+mental unit, pediatrics, Detail, Refer,,,, must be user. => Details, all Details
+
