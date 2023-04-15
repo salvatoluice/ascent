@@ -21,12 +21,47 @@ import Mercedes from './pages/spares/Mercedes'
 import Admin from './components/admin/Admin'
 import styled from "styled-components"
 import Cart from './components/cart/Cart'
+import { useState } from 'react'
 
 axios.defaults.baseURL = "http://127.0.0.1:4000";
 axios.defaults.withCredentials = true;
 
 
 function App() {
+
+  // const { productItems } = Data
+  // const { shopItems } = Sdata
+
+ 
+  const [CartItem, setCartItem] = useState([])
+
+  const addToCart = (product) => {
+    const productExit = CartItem.find((item) => item.id === product.id)
+
+    if (productExit) {
+      setCartItem(CartItem.map((item) => (item.id === product.id ? { ...productExit, qty: productExit.qty + 1 } : item)))
+    } else {
+      setCartItem([...CartItem, { ...product, qty: 1 }])
+    }
+  }
+
+  const removeFromCart = (product) => {
+    setCartItem(CartItem.filter((item) => item.id !== product.id))
+  }
+
+  const decreaseQty = (product) => {
+    const productExit = CartItem.find((item) => item.id === product.id)
+
+ 
+    if (productExit.qty === 1) {
+      setCartItem(CartItem.filter((item) => item.id !== product.id))
+    } else {
+   
+      setCartItem(CartItem.map((item) => (item.id === product.id ? { ...productExit, qty: productExit.qty - 1 } : item)))
+    }
+  }
+
+
   const Div = styled.div`
   position: relative;
 `;
