@@ -1,14 +1,21 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { addCart } from '../../redux/action';
 import { useParams } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
 
 const SingleSpare = () => {
     const {id} = useParams();
     const [spare, setSpare] = useState([]);
+    const dispatch = useDispatch();
+    const addProduct = (product) => {
+        dispatch(addCart(product));
+        console.log('added')
+    }
     useEffect(() => {
         axios.get(`/spares/${id}`).then(response => {
             setSpare(response.data);
-            console.log(data);
+            // console.log(data);
         })
     }, [id]);
     // console
@@ -27,7 +34,7 @@ const SingleSpare = () => {
                 <p className='text-black'>Manufacturer: <span className='font-semibold py-2'>{spare.manufacturer}</span></p>
                 <p className='text-xl text-black'>Supplier: <span className='font-semibold'>{spare.supplier}</span> </p>
                 <p className='italic text-black text-xl pb-4'>Price: <span className='font-semibold'>Ksh. {spare.price}</span> </p>
-                <button className='primary'>Add to Cart</button>
+                <button onClick={() => addProduct(spare)} className='primary'>Add to Cart</button>
             </div>
         </div>
         <div style={{width: '70%'}} className='py-4 m-auto'>
