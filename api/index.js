@@ -181,23 +181,23 @@ app.get('/cars', async (req, res) => {
   res.json( await Cars.find())
 });
 
-app.post('/booking', async (req, res) => {
-  mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
-  const userData = await getUserDataFromToken(req);
-  const {
-    car,checkin,checkout,maxPass,name,phone,price,
-  } = req.body;
-  Booking.create({
-    car,checkin,checkout,maxPass,name,phone,price,
-    user:userData.id,
-  }).then((doc) => {
-    res.json(doc);
-  }).catch((err) => {
-    throw err;
-  });
-});
+// app.post('/bookings', async (req, res) => {
+//   mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
+//   const userData = await getUserDataFromToken(req);
+//   const {
+//     car,checkin,checkout,maxPass,name,phone,price,
+//   } = req.body;
+//   Booking.create({
+//     car,checkin,checkout,maxPass,name,phone,price,
+//     user:userData.id,
+//   }).then((doc) => {
+//     res.json(doc);
+//   }).catch((err) => {
+//     throw err;
+//   });
+// });
 
-app.patch('/booking', async (req, res) => {
+app.post('/booking', async (req, res) => {
   const userData = await getUserDataFromToken(req);
   const {car, checkin, checkout, number, name, email, price} = req.body;
   Booking.create({
