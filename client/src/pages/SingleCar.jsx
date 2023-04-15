@@ -55,14 +55,14 @@ const SingleCar = () => {
 
     if (showForm) {
         return (
-            <div className="book">
+            <div className="book text-black">
                 <button onClick={() => setShowForm(false)} className='rounded-full p-1 border border-black bg-white mx-4'>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                         <path fillRule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clipRule="evenodd" />
                     </svg>
                 </button>
-                <h1 className='text-center font-bold text-2xl'>Book This Car </h1>
-                <p className='text-center italic'>{car.title}</p>
+                <h1 className='text-center text-white font-bold text-2xl'>Book This Car </h1>
+                <p className='text-center text-white italic'>{car.title}</p>
                 <div className="grid py-3 px-4">
                     <label className='font-semibold'>Full Name:</label>
                     <input type="text" required placeholder='E.g John Doe' value={name} onChange={e => setName(e.target.value)} />
@@ -96,8 +96,8 @@ const SingleCar = () => {
 
 
   return (
-    <div className='mt-4 pt-4 bg-gray-100 -mx-8 px-8 py-8'>
-      <h1 className='text-2xl'>{car.title}</h1>
+    <div className='mt-4 pt-4 bg-gray-100 text-black -mx-8 px-8 py-8'>
+      <h1 className='text-2xl text-black'>{car.title}</h1>
       <div className='flex gap-4 items-center'>
       <AddressLink>{car.address}</AddressLink>
         <h3 className='my-2'> Phone no: <b>{car.contaact}</b></h3>
