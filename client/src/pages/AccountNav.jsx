@@ -19,7 +19,7 @@ const AccountNav = () => {
         if (type === subpage) {
           classes += ' bg-primary text-white';
         } else {
-          classes += ' bg-gray-200';
+          classes += ' bg-gray-200 text-black';
         }
         return classes;
       }
