@@ -18,7 +18,7 @@ const Cart = ({spare}) => {
 
     const emptyCart = () => {
         return (
-            <div className="row">
+            <div className="">
               <h3>Your Cart is Empty</h3>
             </div>
         );
@@ -26,19 +26,19 @@ const Cart = ({spare}) => {
 
     const cartItems = (spare) => {
         return (
-            <>
-                <div className='cart text-white'>
-                    <img className='cart_image' src={spare.image} alt={spare.title} />
-                    <div className='description'>
+            <div className='flex flex-col text-white'>
+                <div className='text-white flex flex-col gap-2'>
+                    <img className='flex w-96' src={spare.image} alt={spare.title} />
+                    <div className=''>
                         <h3 className='text-white'>{spare.title}</h3>
                         <p>
-                            {spare.qty} X Ksh. {spare.price} = <span className='total'>Ksh. {spare.qty * spare.price}</span>
+                            {spare.qty} X Ksh. {spare.price} = <span className=''>Ksh. {spare.qty * spare.price}</span>
                         </p>
-                        <button style={{color: 'red'}} className='action' onClick={() => handleDel(spare)}><AiOutlineMinus /></button>
-                        <button style={{color: 'green'}} className='actions' onClick={() => handleAdd(spare)}><GrFormAdd /></button>
+                        <button className='action' onClick={() => handleDel(spare)}><AiOutlineMinus /></button>
+                        <button className='actions' onClick={() => handleAdd(spare)}><GrFormAdd /></button>
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
 
