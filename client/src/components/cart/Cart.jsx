@@ -20,6 +20,7 @@ const Cart = ({spare}) => {
         return (
             <div className="">
               <h3>Your Cart is Empty</h3>
+              <Link className='text-primary' to='/spares'>Shop Now!</Link>
             </div>
         );
       };
@@ -39,7 +40,6 @@ const Cart = ({spare}) => {
                         <div className='flex w-16 gap-4 items-center text-center'>
                         <button className='primary' onClick={() => handleDel(spare)}><AiOutlineMinus /></button>
                         <button className='primary' onClick={() => handleAdd(spare)}><GrFormAdd /></button>
-                        {/* <button className='primary' onClick={() => handleDel(spare)}>Remove</button> */}
                         </div>
                     </div>
                 </div>
