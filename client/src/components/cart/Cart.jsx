@@ -39,6 +39,7 @@ const Cart = ({spare}) => {
                         <div className='flex w-16 gap-4 items-center text-center'>
                         <button className='primary' onClick={() => handleDel(spare)}><AiOutlineMinus /></button>
                         <button className='primary' onClick={() => handleAdd(spare)}><GrFormAdd /></button>
+                        {/* <button className='primary' onClick={() => handleDel(spare)}>Remove</button> */}
                         </div>
                     </div>
                 </div>
@@ -48,13 +49,13 @@ const Cart = ({spare}) => {
 
     const buttons = () => {
         return (
-            <>
-                <div className=''>
-                    <Link to='/payment'>
-                        <h3>Proceed to Payment</h3>
+            <div className='flex justify-center'>
+                <div className='w-48'>
+                    <Link to='/spares/payment'>
+                        <button className="primary">Proceed to pay</button>
                     </Link>
                 </div>
-            </>
+            </div>
         )
     }
 
