@@ -33,8 +33,8 @@ const Cart = ({spare}) => {
                         <h3 style={{color: '#F53850'}} className='text-2xl'>{spare.title}</h3>
                         <div className='flex flex-col'>
                             <span>Quantity: {spare.qty}</span>
-                             <span>Single Amount: <span className='font-bold italic'>Ksh. {spare.price}</span></span>
-                             <span className=''>Total <span style={{color: '#F53850'}} className="font-bold italic underline">Ksh. {spare.qty * spare.price}</span> </span>
+                             <span>Product Amount: <span className='font-bold italic'>Ksh. {spare.price}</span></span>
+                             <span className=''>Total: <span style={{color: '#F53850'}} className="font-bold italic underline">Ksh. {spare.qty * spare.price}</span> </span>
                         </div>
                         <div className='flex w-16 gap-4 items-center text-center'>
                         <button className='primary' onClick={() => handleDel(spare)}><AiOutlineMinus /></button>
