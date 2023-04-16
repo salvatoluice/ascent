@@ -9,6 +9,7 @@ const Navbar = () => {
       <Link className='hover:text-primary' to={'/spares'}>Spare Parts</Link>
       <Link className='hover:text-primary' to={'/contact'}>Contact Us</Link>
       <Link className='hover:text-primary' to={'/careers'}>Careers</Link>
+      <Link className='hover:text-primary' to={'/spares/cart'}>Cart</Link>
     </div>
   )
 }

@@ -71,7 +71,7 @@ const NewSpareForm = () => {
                 </div>
                 <div className="grid py-3 px-4">
                     <label className='font-semibold'>Price:</label>
-                    <input type="number" required placeholder='Product ptice' value={price} onChange={e => setPrice(e.target.value)} />
+                    <input type="number" required placeholder='spare ptice' value={price} onChange={e => setPrice(e.target.value)} />
                 </div>
                 <button className='primary'>
                     Add
