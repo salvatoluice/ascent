@@ -1,20 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { BsFillCalendar2WeekFill } from "react-icons/bs";
+import { AiFillCar } from "react-icons/ai"
 import { IoStatsChart } from "react-icons/io5";
 import { BiGroup } from "react-icons/bi";
 import { FiActivity } from "react-icons/fi";
 import { cardStyles } from "./ReusableStyles";
+import axios from "axios";
 export default function Analytics() {
+  const [cars, setCars] = useState([]);
+  useEffect(() => {
+    axios.get('/cars')
+    .then(response => {
+      setCars(response.data);
+    });
+  }, [])
   return (
     <Section>
       <div className="analytic ">
         <div className="content">
-          <h5>Spent this month</h5>
-          <h2>$682.5</h2>
+          <h5>Total Cars Available:</h5>
+          <h2 className="font-bold">{cars?.length}</h2>
         </div>
         <div className="logo">
-          <BsFillCalendar2WeekFill />
+          <AiFillCar />
         </div>
       </div>
       <div className="analytic">
@@ -23,7 +31,7 @@ export default function Analytics() {
         </div>
         <div className="content">
           <h5>Earnings</h5>
-          <h2>$350.40</h2>
+          <h2>Ksh. 350, 000</h2>
         </div>
       </div>
       <div className="analytic">
@@ -38,7 +46,7 @@ export default function Analytics() {
       <div className="analytic ">
         <div className="content">
           <h5>Activity</h5>
-          <h2>$540.50</h2>
+          <h2>Ksh. 540, 000</h2>
         </div>
         <div className="logo">
           <FiActivity />

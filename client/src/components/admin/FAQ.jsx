@@ -9,7 +9,7 @@ export default function FAQ() {
   const faqs = [
     {
       icon: <AiFillCalendar />,
-      text: "How to manage time and get good marks for trips",
+      text: "managing finances earmed through ascent",
     },
     {
       icon: <MdTimelapse />,
@@ -23,7 +23,7 @@ export default function FAQ() {
   return (
     <Section>
       <div className="title">
-        <h2>Information for drivers</h2>
+        <h2>Information for clients</h2>
       </div>
       <div className="faqs">
         {faqs.map((faq) => {
