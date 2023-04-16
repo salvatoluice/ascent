@@ -3,7 +3,7 @@ Changing the motor industry through technology
 
 Author & Founder : **Salvato Luis**
 
-**All rights reserved. All data here is subjec to copyright**
+**All rights reserved. All data subject to copyright**
 
 From connecting you to individuals who might rent you a car, giving you personal rides at any consvenient time and place, to providing you a convenient online store for all car parts. Try us out for a better experience. A 24hr customer support and consistent team work is our mission. Making your lifestyle better is our passion.
 
