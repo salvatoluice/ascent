@@ -22,6 +22,7 @@ import Admin from './components/admin/Admin'
 import styled from "styled-components"
 import Cart from './components/cart/Cart'
 import { useState } from 'react'
+import Payment from './pages/spares/Payment'
 
 axios.defaults.baseURL = "http://127.0.0.1:4000";
 axios.defaults.withCredentials = true;
@@ -52,6 +53,7 @@ function App() {
           <Route path='/spares/mercedes' element={<Mercedes />} />
           <Route path='/spares/:id' element={<SingleSpare />} />
           <Route path='/spares/cart' element={<Cart />} />
+          <Route path='/spares/payment' element={<Payment />} />
           {/* <Div> */}
             <Route path='/admin' element={<Admin />} />
           {/* </Div> */}    
