@@ -8,21 +8,21 @@ export default function Transfers() {
   const transactions = [
     {
       image: avatarImage,
-      name: "From Kishan Sheth",
+      name: "From Vova Bosibori",
       time: "Today, 16:36",
-      amount: "+$50",
+      amount: "+Ksh. 500",
     },
     {
       image: avatarImage,
-      name: "To Lauras Santos",
+      name: "To Serah Amani",
       time: "Today, 08:49",
-      amount: "-$25",
+      amount: "-Ksh. 2500",
     },
     {
       image: avatarImage,
       name: "From Jadon S.",
       time: "Yesterday, 14:36",
-      amount: "+$150",
+      amount: "+Ksh. 150",
     },
   ];
   return (

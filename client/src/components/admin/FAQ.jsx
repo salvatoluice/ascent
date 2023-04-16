@@ -9,7 +9,7 @@ export default function FAQ() {
   const faqs = [
     {
       icon: <AiFillCalendar />,
-      text: "managing finances earmed through ascent",
+      text: "managing finances earned through ascent",
     },
     {
       icon: <MdTimelapse />,

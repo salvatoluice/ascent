@@ -163,7 +163,7 @@ export default function Earnings() {
       <div className="top">
         <div className="info">
           <h5>This month earnings</h5>
-          <h1>$682.5</h1>
+          <h1>Ksh. 68, 200</h1>
           <div className="growth">
             <span>+2.45%</span>
           </div>
