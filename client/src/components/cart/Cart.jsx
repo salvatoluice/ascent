@@ -27,15 +27,19 @@ const Cart = ({spare}) => {
     const cartItems = (spare) => {
         return (
             <div className='flex flex-col text-white'>
-                <div className='text-white flex flex-col gap-2'>
-                    <img className='flex w-96' src={spare.image} alt={spare.title} />
-                    <div className=''>
-                        <h3 className='text-white'>{spare.title}</h3>
-                        <p>
-                            {spare.qty} X Ksh. {spare.price} = <span className=''>Ksh. {spare.qty * spare.price}</span>
-                        </p>
-                        <button className='action' onClick={() => handleDel(spare)}><AiOutlineMinus /></button>
-                        <button className='actions' onClick={() => handleAdd(spare)}><GrFormAdd /></button>
+                <div className='text-white flex gap-6'>
+                    <img className='flex w-48' src={spare.image} alt={spare.title} />
+                    <div className='flex flex-col gap-1'>
+                        <h3 style={{color: '#F53850'}} className='text-2xl'>{spare.title}</h3>
+                        <div className='flex flex-col'>
+                            <span>Quantity: {spare.qty}</span>
+                             <span>Single Amount: <span className='font-bold italic'>Ksh. {spare.price}</span></span>
+                             <span className=''>Total <span style={{color: '#F53850'}} className="font-bold italic underline">Ksh. {spare.qty * spare.price}</span> </span>
+                        </div>
+                        <div className='flex w-16 gap-4 items-center text-center'>
+                        <button className='primary' onClick={() => handleDel(spare)}><AiOutlineMinus /></button>
+                        <button className='primary' onClick={() => handleAdd(spare)}><GrFormAdd /></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -45,7 +49,7 @@ const Cart = ({spare}) => {
     const buttons = () => {
         return (
             <>
-                <div className='btn'>
+                <div className=''>
                     <Link to='/payment'>
                         <h3>Proceed to Payment</h3>
                     </Link>
@@ -56,8 +60,8 @@ const Cart = ({spare}) => {
 
 
   return (
-    <div className='main_cart'>
-        <div className='space'></div>
+    <div className='flex flex-col gap-4 mt-6 py-6'>
+        <div className=''></div>
         {state.length === 0 && emptyCart()}
         {state.length !== 0 && state.map(cartItems)}
         {state.length !== 0 && buttons()}
