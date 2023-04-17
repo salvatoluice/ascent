@@ -21,10 +21,10 @@ import Mercedes from './pages/spares/Mercedes'
 import Admin from './components/admin/Admin'
 import styled from "styled-components"
 import Cart from './components/cart/Cart'
-import { useState } from 'react'
 import Payment from './pages/spares/Payment'
 import Careers from './pages/careers/Careers'
 import NewJobForm from './pages/careers/NewJobForm'
+import Contact from './pages/Contact'
 
 axios.defaults.baseURL = "http://127.0.0.1:4000";
 axios.defaults.withCredentials = true;
@@ -57,6 +57,7 @@ function App() {
           <Route path='/spares/cart' element={<Cart />} />
           <Route path='/spares/payment' element={<Payment />} />
           <Route path='/admin' element={<Admin />} />
+          <Route path='/contact' element={<Contact />} />
           <Route path='/careers' element={<Careers />} />
           <Route path='/careers/new' element={<NewJobForm />} />
         </Route>
