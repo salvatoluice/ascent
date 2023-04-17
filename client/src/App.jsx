@@ -24,6 +24,7 @@ import Cart from './components/cart/Cart'
 import { useState } from 'react'
 import Payment from './pages/spares/Payment'
 import Careers from './pages/careers/Careers'
+import NewJobForm from './pages/careers/NewJobForm'
 
 axios.defaults.baseURL = "http://127.0.0.1:4000";
 axios.defaults.withCredentials = true;
@@ -57,6 +58,7 @@ function App() {
           <Route path='/spares/payment' element={<Payment />} />
           <Route path='/admin' element={<Admin />} />
           <Route path='/careers' element={<Careers />} />
+          <Route path='/careers/new' element={<NewJobForm />} />
         </Route>
       </Routes>
     </UserContextProvider>
