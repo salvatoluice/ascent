@@ -54,9 +54,8 @@ function App() {
           <Route path='/spares/:id' element={<SingleSpare />} />
           <Route path='/spares/cart' element={<Cart />} />
           <Route path='/spares/payment' element={<Payment />} />
-          {/* <Div> */}
-            <Route path='/admin' element={<Admin />} />
-          {/* </Div> */}    
+          <Route path='/admin' element={<Admin />} />
+          {/* <Route path='/careers' element={< />} /> */}
         </Route>
       </Routes>
     </UserContextProvider>
