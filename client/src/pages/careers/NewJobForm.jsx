@@ -2,9 +2,9 @@ import React from 'react'
 
 const NewJobForm = () => {
   return (
-    <div>
+    <form className='book'>
       New Job Form
-    </div>
+    </form>
   )
 }
 
