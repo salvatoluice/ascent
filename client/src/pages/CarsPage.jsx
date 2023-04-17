@@ -27,7 +27,7 @@ const CarsPage = () => {
                 Add New Car
             </Link>
         </div>
-        <div className='mt-4'>
+        <div className='mt-4 text-black'>
             {cars.length > 0 && cars.map(car => (
                 <Link to={'/account/cars/'+car._id} className='flex bg-gray-100 cursor-pointer mt-4 gap-4 p-4 rounded-2xl'>
                     <div className='flex w-32 h-32 bg-gray-300 grow shrink-0'>
