@@ -38,3 +38,5 @@ This project is built to suit the users of everyone, wheather you own a car or n
 * MongoDB
 
 # 2. Getting Started
+
+** a). Sign up and login to the web app
