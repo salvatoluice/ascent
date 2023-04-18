@@ -36,3 +36,5 @@ This project is built to suit the users of everyone, wheather you own a car or n
 * NodeJa
 * Express js
 * MongoDB
+
+# 2. Getting Started
