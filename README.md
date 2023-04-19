@@ -44,7 +44,7 @@ a). Sign up and login to the web app
 
 b). Browse through and find your area of choice
 
-** c). Register your car if you have one
+c). Register your car if you have one
 
 ** d). Sign up for a car if you want to rent one
 
