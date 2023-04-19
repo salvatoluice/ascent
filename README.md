@@ -1,6 +1,6 @@
 # ascent
 
-## Changing the motor industry, through the web
+## Changing the motor industry, changing lives
 
 Author & Founder : **Salvato Luis**
 
