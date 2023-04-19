@@ -48,4 +48,4 @@ c). Register your car if you have one
 
 d). Sign up for a car if you want to rent one
 
-** e). Make Payment
+e). Make Payment
