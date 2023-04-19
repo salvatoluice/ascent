@@ -1,5 +1,7 @@
 # ascent
 
+## Changing the motor industry, through the web
+
 Author & Founder : **Salvato Luis**
 
 **All rights reserved. All data subject to copyright**
