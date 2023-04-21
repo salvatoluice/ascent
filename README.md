@@ -1,6 +1,6 @@
 # Ascent
 
-## Changing the motor industry, changing lives
+## A company with a heart for the people
 
 Author & Founder : **Salvato Luis**
 
