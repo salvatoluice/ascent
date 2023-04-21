@@ -1,6 +1,6 @@
 # Ascent
 
-## Changing the motor industry, changing lives
+## A company with a heart for the people
 
 Author & Founder : **Salvato Luis**
 
@@ -12,7 +12,7 @@ We are also developing an online car spares store for deiveries all over the cou
 
 **Table of contents**
 
-*About the project*
+*About the project
 
 *Built with
 
