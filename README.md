@@ -1,4 +1,4 @@
-<!-- # Ascent
+# Ascent
 
 ## Changing the motor industry, changing lives
 
@@ -50,4 +50,4 @@ d). Sign up for a car if you want to rent one
 
 e). Make Payment
 
-f). Wait for service completion -->
+f). Wait for service completion
