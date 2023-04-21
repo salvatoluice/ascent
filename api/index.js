@@ -104,7 +104,6 @@ app.post('/upload-by-link', async (req,res) => {
 // Multer middlware for photo uploads
 const photosMiddleware = multer({dest: 'uploads'})
 app.post('/upload', photosMiddleware.array('photos', 100), (req, res) => {
-  // console.log(req.files);
   const uploadedFiles = [];
   for (let i = 0; i < req.files.length; i++){
     const {path, originalname} = req.files[i];
@@ -144,7 +143,6 @@ app.get('/user-cars', (req, res) => {
 });
 
 app.get('/cars/:id', async (req,res) => {
-  // res.json(req.params)
   const {id} = req.params;
   res.json(await Cars.findById(id));
 })
