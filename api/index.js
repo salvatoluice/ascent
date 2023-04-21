@@ -26,13 +26,6 @@ app.use(cors({
   origin: 'http://127.0.0.1:5173',
 }));
 
-// console.log(process.env.MONGO_URL);
-
-// mongoose.connect(process.env.MONGO_URL);
-// app.get('/test', (req, res) => {
-//     res.json('test is ok')
-// });
-
 function getUserDataFromToken(req) {
   return new Promise((resolve, reject) => {
     jwt.verify(req.cookies.token, jwtSecret, {}, async (err, userData) => {
