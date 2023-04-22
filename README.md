@@ -1,4 +1,4 @@
-# Ascent
+# ascent
 
 ## A company with a heart for the people
 
