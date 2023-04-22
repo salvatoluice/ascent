@@ -32,7 +32,7 @@ This project is built to suit the users of everyone, wheather you own a car or n
 # 1. Built with:
 
 * Reactjs & Tailwind
-* NodeJa
+* NodeJs
 * Express js
 * MongoDB
 
