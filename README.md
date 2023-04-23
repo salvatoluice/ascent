@@ -1,14 +1,14 @@
-# Ascent
+# ascent
 
 ## A company with a heart for the people
 
 Author & Founder : **Salvato Luis**
 
-**All rights reserved. All data subject to copyright**
+**All rights reserved. All data is subject to copyright**
 
-From connecting you to individuals who might rent you a car, giving you personal rides at any consvenient time and place, to providing you a convenient online store for all car parts. Try us out for a better experience. A 24hr customer support and consistent team work is our mission. Making your lifestyle better is our passion.
+From connecting you to individuals who might rent you a car, giving you personal rides at any consvenient time and place, to providing you a convenient online store for all car parts. Try us out for a better experience. A 24hr customer support and consistent team work is our mission. Making your lifestyle better is what we're built to do.
 
-We are also developing an online car spares store for deiveries all over the country at just a tap of a button.
+We are also developing an online car spares store for deiveries all over the country at a tap of a button.
 
 **Table of contents**
 
@@ -20,21 +20,19 @@ We are also developing an online car spares store for deiveries all over the cou
 
 *Prerequisites
 
-*Usage
-
 *Contributions
 
 *License
 
 ## About the project
 
-This project is built to suit the users of everyone, wheather you own a car or not. We are changing the scope of the motor industry through great innovations. **Changing Your Life is our goal!**
+This project is built to suit the users of everyone, wheather you own a car or not. We are changing the scope of the motor industry through great innovations.
 
 
 # 1. Built with:
 
 * Reactjs & Tailwind
-* NodeJa
+* NodeJs
 * Express js
 * MongoDB
 
