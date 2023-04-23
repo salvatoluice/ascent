@@ -138,6 +138,7 @@ app.post('/cars', (req, res) => {
   });
 });
 
+// Get user's cars
 app.get('/user-cars', (req, res) => {
   const {token} = req.cookies;
   jwt.verify(token, jwtSecret, {}, async (err, userData) => {
@@ -146,11 +147,13 @@ app.get('/user-cars', (req, res) => {
   });
 });
 
+// Single car
 app.get('/cars/:id', async (req,res) => {
   const {id} = req.params;
   res.json(await Cars.findById(id));
 })
 
+// Edit cars
 app.put('/cars', async (req, res) => {
   mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
   const {token} = req.cookies;
@@ -172,10 +175,12 @@ app.put('/cars', async (req, res) => {
   });
 });
 
+// Cars
 app.get('/cars', async (req, res) => {
   res.json( await Cars.find())
 });
 
+// Car booking
 app.post('/booking', async (req, res) => {
   const userData = await getUserDataFromToken(req);
   const {car, checkin, checkout, number, name, email, price} = req.body;
@@ -189,11 +194,13 @@ app.post('/booking', async (req, res) => {
   })
 });
 
+// Car booking
 app.get('/booking', async (req, res) => {
   const userData = await getUserDataFromToken(req);
   res.json( await Booking.find({user:userData.id}).populate('car'))
 })
 
+// Car spares
 app.post('/spares', async (req, res) => {
   mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
   const {title, type, category, description, manufacturer, supplier, features, image, price} = req.body;
@@ -206,6 +213,7 @@ app.post('/spares', async (req, res) => {
   })
 });
 
+// Edit car spares
 app.put('/spares', async (req, res) => {
   mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
   const {title, type, category, description, manufacturer, supplier, features, image, price} = req.body;
@@ -218,10 +226,12 @@ app.put('/spares', async (req, res) => {
   })
 });
 
+// Get car spares
 app.get('/spares', async (req, res) => {
   res.json( await Spare.find())
 });
 
+// Single spare
 app.get('/spares/:id', async (req,res) => {
   // res.json(req.params)
   const {id} = req.params;
