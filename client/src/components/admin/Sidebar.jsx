@@ -5,6 +5,7 @@ import { RiDashboard2Fill } from "react-icons/ri";
 import { FaAddressCard, FaTaxi } from "react-icons/fa";
 import { GiTwirlCenter } from "react-icons/gi";
 import { BsFillChatTextFill } from "react-icons/bs";
+import { AiFillAppstore } from "react-icons/ai";
 import { IoSettings } from "react-icons/io5";
 import { FiLogOut } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -80,7 +81,7 @@ export default function Sidebar() {
                 onClick={() => setCurrentLink(2)}
               >
                 <a href="#">
-                  <RiDashboard2Fill />
+                  <AiFillAppstore />
                   <span> Cars</span>
                 </a>
               </li>
