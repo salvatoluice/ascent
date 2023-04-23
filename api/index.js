@@ -34,6 +34,7 @@ function getUserDataFromToken(req) {
   });
 }
 
+// Register
 app.post('/register', async (req, res) => {
     mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
     const {name,email,password} = req.body;
@@ -50,6 +51,7 @@ app.post('/register', async (req, res) => {
     }
 });
 
+// Login
 app.post('/login', async (req,res) => {
   mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
   const {email,password} = req.body;
@@ -72,6 +74,7 @@ app.post('/login', async (req,res) => {
   }
 });
 
+// Profile
 app.get('/profile', (req,res) => {
   mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
   const {token} = req.cookies;
@@ -90,6 +93,7 @@ app.post('/logout', (req, res) => {
   res.cookie('token', '').json(true)
 })
 
+// Photo upload
 app.post('/upload-by-link', async (req,res) => {
   const {link} = req.body;
   const newName = 'photo' + Date.now() + '.jpg';
@@ -115,6 +119,7 @@ app.post('/upload', photosMiddleware.array('photos', 100), (req, res) => {
   res.json(uploadedFiles);
 });
 
+// Post car
 app.post('/cars', (req, res) => {
   mongoose.connect('mongodb+srv://salvatoluice:SBYfKBnzTMqenbIL@cluster0.2dnqjta.mongodb.net/?retryWrites=true&w=majority');
   const {token} = req.cookies;
