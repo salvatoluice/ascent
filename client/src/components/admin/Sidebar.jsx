@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { MdSpaceDashboard, MdOutlineAttachMoney, MdQuiz } from "react-icons/md";
+import { MdSpaceDashboard, MdOutlineAttachMoney, MdQuiz, MdPolicy } from "react-icons/md";
 import { RiDashboard2Fill } from "react-icons/ri";
 import { FaAddressCard, FaTaxi } from "react-icons/fa";
 import { GiTwirlCenter } from "react-icons/gi";
@@ -136,7 +136,7 @@ export default function Sidebar() {
                 onClick={() => setCurrentLink(6)}
               >
                 <a href="#">
-                  <IoSettings />
+                  <MdPolicy />
                   <span> Policy</span>
                 </a>
               </li>
