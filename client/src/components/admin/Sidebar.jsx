@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { MdSpaceDashboard, MdOutlineAttachMoney } from "react-icons/md";
+import { MdSpaceDashboard, MdOutlineAttachMoney, MdQuiz } from "react-icons/md";
 import { RiDashboard2Fill } from "react-icons/ri";
 import { FaAddressCard, FaTaxi } from "react-icons/fa";
 import { GiTwirlCenter } from "react-icons/gi";
@@ -127,7 +127,7 @@ export default function Sidebar() {
                 onClick={() => setCurrentLink(5)}
               >
                 <a href="#">
-                  <BsFillChatTextFill />
+                  <MdQuiz />
                   <span> FAQs</span>
                 </a>
               </li>
