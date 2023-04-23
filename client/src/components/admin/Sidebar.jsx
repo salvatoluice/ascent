@@ -8,7 +8,7 @@ import { BsFillChatTextFill } from "react-icons/bs";
 import { AiFillAppstore } from "react-icons/ai";
 import { IoSettings } from "react-icons/io5";
 import { FiLogOut } from "react-icons/fi";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu, GiCrescentStaff } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import scrollreveal from "scrollreveal";
 export default function Sidebar() {
@@ -99,7 +99,7 @@ export default function Sidebar() {
                 onClick={() => setCurrentLink(4)}
               >
                 <a href="#">
-                  <GiTwirlCenter />
+                  <GiCrescentStaff />
                   <span> Staff</span>
                 </a>
               </li>
