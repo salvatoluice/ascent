@@ -2,7 +2,7 @@
 
 ## Making your next bold move
 
-Author & Founder : **Salvato Luis**
+**Salvato Luis**, Author & Founder
 
 **All rights reserved. All data is subject to copyright**
 
