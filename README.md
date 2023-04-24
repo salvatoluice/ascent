@@ -1,6 +1,6 @@
 # ascent
 
-## A company with a heart for the people
+## Making your next bold move
 
 Author & Founder : **Salvato Luis**
 
