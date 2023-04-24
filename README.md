@@ -31,7 +31,7 @@ This project is built to suit the users of everyone, wheather you own a car or n
 
 # 1. Built with:
 
-* Vite + Reactjs & Tailwind
+* Vite + Reactjs, Tailwind & css
 * NodeJs
 * Express js
 * MongoDB
