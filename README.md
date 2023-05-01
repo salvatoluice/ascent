@@ -72,3 +72,7 @@ f). Wait for service completion
 * cors
 
 * jsonwebtoken
+
+* mongoose
+
+* multer
