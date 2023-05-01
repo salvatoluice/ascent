@@ -63,6 +63,10 @@ f). Wait for service completion
 
 * date-fns
 
+* redux
+
+* tailwind css
+
 ### Api
 
 * cors
