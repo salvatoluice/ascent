@@ -64,3 +64,7 @@ f). Wait for service completion
 * date-fns
 
 ### Api
+
+* cors
+
+* jsonwebtoken
