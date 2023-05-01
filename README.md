@@ -29,7 +29,7 @@ We are also developing an online car spares store for deiveries all over the cou
 This project is built to suit the users of everyone, wheather you own a car or not. We are changing the scope of the motor industry through great innovations.
 
 
-# 1. Built with:
+# 1. Built with
 
 * Vite + Reactjs, Tailwind & css
 * NodeJs
