@@ -38,7 +38,7 @@ This project is built to suit the users of everyone, wheather you own a car or n
 
 ## Getting Started
 
-a). Sign up and login to the web app
+* Sign up and login to the web app
 
 b). Browse through and find your area of choice
 
