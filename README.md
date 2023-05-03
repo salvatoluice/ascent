@@ -20,9 +20,9 @@ We are also developing an online car spares store for deiveries all over the cou
 
 * Prerequisites
 
-*Contributions
+* Contributions
 
-*License
+* License
 
 ## About the project
 
