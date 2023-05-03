@@ -14,9 +14,9 @@ We are also developing an online car spares store for deiveries all over the cou
 
 *About the project
 
-*Built with
+* Built with
 
-*Getting started
+* Getting started
 
 *Prerequisites
 
