@@ -48,7 +48,7 @@ This project is built to suit the users of everyone, wheather you own a car or n
 
 * Make Payment
 
-f). Wait for service completion
+* Wait for service completion
 
 
 ## Dependancies used
