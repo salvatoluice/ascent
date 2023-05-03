@@ -42,7 +42,7 @@ This project is built to suit the users of everyone, wheather you own a car or n
 
 * Browse through and find your area of choice
 
-c). Register your car if you have one
+* Register your car if you have one
 
 d). Sign up for a car if you want to rent one
 
