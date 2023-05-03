@@ -44,7 +44,7 @@ This project is built to suit the users of everyone, wheather you own a car or n
 
 * Register your car if you have one
 
-d). Sign up for a car if you want to rent one
+* Sign up for a car if you want to rent one
 
 e). Make Payment
 
