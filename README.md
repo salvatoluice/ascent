@@ -46,7 +46,7 @@ This project is built to suit the users of everyone, wheather you own a car or n
 
 * Sign up for a car if you want to rent one
 
-e). Make Payment
+* Make Payment
 
 f). Wait for service completion
 
