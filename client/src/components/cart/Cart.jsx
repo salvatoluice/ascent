@@ -52,7 +52,7 @@ const Cart = ({spare}) => {
             <div className='flex justify-center'>
                 <div className='w-48'>
                     <Link to='/spares/payment'>
-                        <button className="primary">Proceed to pay</button>
+                        <button className="primary">Proceed to Checkout</button>
                     </Link>
                 </div>
             </div>
