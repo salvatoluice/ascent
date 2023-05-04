@@ -1,8 +1,8 @@
 # ascent
 
-## A company with a heart for the people
+## Making your next bold move
 
-Author & Founder : **Salvato Luis**
+**Salvato Luis**, Author & Founder
 
 **All rights reserved. All data is subject to copyright**
 
@@ -12,40 +12,77 @@ We are also developing an online car spares store for deiveries all over the cou
 
 **Table of contents**
 
-*About the project
+* About the project
 
-*Built with
+* Built with
 
-*Getting started
+* Getting started
 
-*Prerequisites
+* Prerequisites
 
-*Contributions
+* Contributions
 
-*License
+* License
 
 ## About the project
 
 This project is built to suit the users of everyone, wheather you own a car or not. We are changing the scope of the motor industry through great innovations.
 
 
-# 1. Built with:
+## Built with
 
-* Reactjs & Tailwind
+* Vite + React 
+* Tailwind
 * NodeJs
 * Express js
 * MongoDB
 
-# 2. Getting Started
+## Getting Started
 
-a). Sign up and login to the web app
+* Sign up and login to the web app
 
-b). Browse through and find your area of choice
+* Browse through and find your area of choice
 
-c). Register your car if you have one
+* Register your car if you have one
 
-d). Sign up for a car if you want to rent one
+* Sign up for a car if you want to rent one
 
-e). Make Payment
+* Make Payment
 
-f). Wait for service completion
+* Wait for service completion
+
+
+## Dependancies used
+
+
+### Client
+
+* Chakra ui
+
+* Axios
+
+* buffer
+
+* date-fns
+
+* redux
+
+* tailwind css
+
+### Api
+
+* cors
+
+* jsonwebtoken
+
+* mongoose
+
+* multer
+
+* express
+
+* dotenv
+
+* fs
+
+* image-downloader
