@@ -20,7 +20,7 @@ const Cart = ({spare}) => {
         return (
             <div className="">
               <h3>You haven't shopped anything!</h3>
-              <Link className='text-primary' to='/spares'>Shop Now!</Link>
+              <Link className='text-primary' to='/spares'>Go to Store</Link>
             </div>
         );
       };
