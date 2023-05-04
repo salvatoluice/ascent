@@ -7,14 +7,14 @@ export default function Navbar() {
   return (
     <Nav>
       <div className="title">
-        <h4>Hi {user?.name},</h4>
+        <h4>Hello {user?.name},</h4>
         <h1>
           Welcome to <span>ascent admin dashboard</span>
         </h1>
       </div>
       <div className="search">
         <BiSearch />
-        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="looking for?" />
       </div>
     </Nav>
   );

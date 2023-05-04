@@ -13,7 +13,7 @@ export default function Analytics() {
     .then(response => {
       setCars(response.data);
     });
-  }, [])
+  }, []);
   return (
     <Section>
       <div className="analytic ">
