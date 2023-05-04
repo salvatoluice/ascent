@@ -23,6 +23,7 @@ app.use('/uploads', express.static(__dirname+'/uploads'));
 app.use(cors({
   credentials: true,
   origin: 'http://127.0.0.1:5173',
+  // origin: 'http://localhost:5173/',
 }));
 
 function getUserDataFromToken(req) {
