@@ -86,3 +86,5 @@ This project is built to suit the users of everyone, wheather you own a car or n
 * fs
 
 * image-downloader
+
+* bcryptjs
