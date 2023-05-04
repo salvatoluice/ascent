@@ -6,7 +6,7 @@ const Navbar = () => {
   const state = useSelector((state) => state.handleCart);
   return (
     <div className='flex items-center gap-4 italic justify-center mt-4'>
-      <Link className='text-primary hover:text-primary' to={'/'}>Home</Link>
+      {/* <Link className='text-primary hover:text-primary' to={'/'}>Home</Link> */}
       <Link className='hover:text-primary' to={'/about'}>About us</Link>
       <Link className='hover:text-primary' to={'/spares'}>Spare Parts</Link>
       <Link className='hover:text-primary' to={'/contact'}>Contact Us</Link>
