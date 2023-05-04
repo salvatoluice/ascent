@@ -1,4 +1,4 @@
-# ascent
+# Ascent
 
 ## Power to Experience!
 
