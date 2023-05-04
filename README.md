@@ -1,6 +1,6 @@
 # ascent
 
-## Making your next bold move
+## Power to Experience!
 
 **Salvato Luis**, Author & Founder
 
