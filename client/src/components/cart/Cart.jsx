@@ -19,7 +19,7 @@ const Cart = ({spare}) => {
     const emptyCart = () => {
         return (
             <div className="">
-              <h3>Your Cart is Empty</h3>
+              <h3>You haven't shopped anything!</h3>
               <Link className='text-primary' to='/spares'>Shop Now!</Link>
             </div>
         );
